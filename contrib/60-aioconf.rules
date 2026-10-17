@@ -1,0 +1,6 @@
+# NZXT Kraken 2023 (USB 1e71:300e)
+#
+# uaccess:        the logged-in desktop user can run aioconf without sudo.
+# SYSTEMD_WANTS:  apply the curves whenever the cooler appears, which covers
+#                 boot, replugging, and resume when the device re-enumerates.
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="300e", TAG+="uaccess", TAG+="systemd", ENV{SYSTEMD_WANTS}+="aioconf.service"

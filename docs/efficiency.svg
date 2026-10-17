@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420" role="img" aria-label="Work per joule vs package power. Same runs. 100% = the efficiency at 253 W. Lower limits do more work per watt.">
+<style>
+  .surface { fill: #fcfcfb; }
+  .title { fill: #0b0b0b; font: 600 17px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .sub { fill: #52514e; font: 13px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .tick { fill: #898781; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; }
+  .axis-label { fill: #52514e; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .label { fill: #0b0b0b; font: 600 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .label-muted { fill: #52514e; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .grid { stroke: #e1e0d9; stroke-width: 1; }
+  .base { stroke: #c3c2b7; stroke-width: 1; }
+  .ref { stroke: #898781; stroke-width: 1; }
+  .s1-line { stroke: #2a78d6; fill: none; }
+  .s2-line { stroke: #eb6834; fill: none; }
+  .s3-line { stroke: #1baf7a; fill: none; }
+  .s1-dot { fill: #2a78d6; }
+  .s2-dot { fill: #eb6834; }
+  .ring { stroke: #fcfcfb; stroke-width: 2; }
+  @media (prefers-color-scheme: dark) {
+    .surface { fill: #1a1a19; }
+    .title, .label { fill: #f0efec; }
+    .sub, .axis-label, .label-muted { fill: #c3c2b7; }
+    .grid { stroke: #2c2c2a; }
+    .base { stroke: #383835; }
+    .s1-line { stroke: #3987e5; }
+    .s2-line { stroke: #d95926; }
+    .s3-line { stroke: #199e70; }
+    .s1-dot { fill: #3987e5; }
+    .s2-dot { fill: #d95926; }
+    .ring { stroke: #1a1a19; }
+  }
+</style>
+<rect class="surface" width="720" height="420" rx="8"/>
+<text class="title" x="64" y="30">Work per joule vs package power</text>
+<text class="sub" x="64" y="50">Same runs. 100% = the efficiency at 253 W. Lower limits do more work per watt.</text>
+<line class="grid" x1="64" y1="364.0" x2="588" y2="364.0"/>
+<text class="tick" x="56" y="368.0" text-anchor="end">60%</text>
+<line class="grid" x1="64" y1="318.7" x2="588" y2="318.7"/>
+<text class="tick" x="56" y="322.7" text-anchor="end">80%</text>
+<line class="grid" x1="64" y1="273.3" x2="588" y2="273.3"/>
+<text class="tick" x="56" y="277.3" text-anchor="end">100%</text>
+<line class="grid" x1="64" y1="228.0" x2="588" y2="228.0"/>
+<text class="tick" x="56" y="232.0" text-anchor="end">120%</text>
+<line class="grid" x1="64" y1="182.7" x2="588" y2="182.7"/>
+<text class="tick" x="56" y="186.7" text-anchor="end">140%</text>
+<line class="grid" x1="64" y1="137.3" x2="588" y2="137.3"/>
+<text class="tick" x="56" y="141.3" text-anchor="end">160%</text>
+<line class="grid" x1="64" y1="92.0" x2="588" y2="92.0"/>
+<text class="tick" x="56" y="96.0" text-anchor="end">180%</text>
+<line class="base" x1="64" y1="364" x2="588" y2="364"/>
+<text class="tick" x="105.9" y="382" text-anchor="middle">100</text>
+<text class="tick" x="210.7" y="382" text-anchor="middle">150</text>
+<text class="tick" x="315.5" y="382" text-anchor="middle">200</text>
+<text class="tick" x="420.3" y="382" text-anchor="middle">250</text>
+<text class="tick" x="525.1" y="382" text-anchor="middle">300</text>
+<text class="axis-label" x="326.0" y="406" text-anchor="middle">Package power (W)</text>
+<text class="axis-label" transform="translate(16 228.0) rotate(-90)" text-anchor="middle">Work per joule (% of 253 W)</text>
+<path class="s1-line" d="M105.7 84.0 L158.3 131.4 L210.7 167.5 L273.6 207.3 L315.5 228.9 L367.7 253.3 L426.6 273.3 L525.1 301.8 L545.5 307.2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle class="s1-dot ring" cx="105.7" cy="84.0" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="158.3" cy="131.4" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="210.7" cy="167.5" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="273.6" cy="207.3" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="315.5" cy="228.9" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="367.7" cy="253.3" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="426.6" cy="273.3" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="525.1" cy="301.8" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="545.5" cy="307.2" r="5" style="paint-order: stroke"/>
+<text class="label" x="105.7" y="70.0" text-anchor="middle">184%</text>
+<text class="label" x="545.5" y="293.2" text-anchor="middle">85%</text>
+</svg>

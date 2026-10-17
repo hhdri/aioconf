@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420" role="img" aria-label="Pump speed vs how far the CPU runs above the liquid. 253 W all-core. Bursts are 20 s from idle; sustained is after the liquid settled.">
+<style>
+  .surface { fill: #fcfcfb; }
+  .title { fill: #0b0b0b; font: 600 17px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .sub { fill: #52514e; font: 13px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .tick { fill: #898781; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; }
+  .axis-label { fill: #52514e; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .label { fill: #0b0b0b; font: 600 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .label-muted { fill: #52514e; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .grid { stroke: #e1e0d9; stroke-width: 1; }
+  .base { stroke: #c3c2b7; stroke-width: 1; }
+  .ref { stroke: #898781; stroke-width: 1; }
+  .s1-line { stroke: #2a78d6; fill: none; }
+  .s2-line { stroke: #eb6834; fill: none; }
+  .s3-line { stroke: #1baf7a; fill: none; }
+  .s1-dot { fill: #2a78d6; }
+  .s2-dot { fill: #eb6834; }
+  .ring { stroke: #fcfcfb; stroke-width: 2; }
+  @media (prefers-color-scheme: dark) {
+    .surface { fill: #1a1a19; }
+    .title, .label { fill: #f0efec; }
+    .sub, .axis-label, .label-muted { fill: #c3c2b7; }
+    .grid { stroke: #2c2c2a; }
+    .base { stroke: #383835; }
+    .s1-line { stroke: #3987e5; }
+    .s2-line { stroke: #d95926; }
+    .s3-line { stroke: #199e70; }
+    .s1-dot { fill: #3987e5; }
+    .s2-dot { fill: #d95926; }
+    .ring { stroke: #1a1a19; }
+  }
+</style>
+<rect class="surface" width="720" height="420" rx="8"/>
+<text class="title" x="64" y="30">Pump speed vs how far the CPU runs above the liquid</text>
+<text class="sub" x="64" y="50">253 W all-core. Bursts are 20 s from idle; sustained is after the liquid settled.</text>
+<line class="s2-line" x1="64" y1="70" x2="82" y2="70" stroke-width="2" stroke-linecap="round"/>
+<text class="label-muted" x="88" y="74">20 s burst</text>
+<line class="s1-line" x1="196" y1="70" x2="214" y2="70" stroke-width="2" stroke-linecap="round"/>
+<text class="label-muted" x="220" y="74">Sustained</text>
+<line class="grid" x1="64" y1="364.0" x2="588" y2="364.0"/>
+<text class="tick" x="56" y="368.0" text-anchor="end">40</text>
+<line class="grid" x1="64" y1="318.7" x2="588" y2="318.7"/>
+<text class="tick" x="56" y="322.7" text-anchor="end">45</text>
+<line class="grid" x1="64" y1="273.3" x2="588" y2="273.3"/>
+<text class="tick" x="56" y="277.3" text-anchor="end">50</text>
+<line class="grid" x1="64" y1="228.0" x2="588" y2="228.0"/>
+<text class="tick" x="56" y="232.0" text-anchor="end">55</text>
+<line class="grid" x1="64" y1="182.7" x2="588" y2="182.7"/>
+<text class="tick" x="56" y="186.7" text-anchor="end">60</text>
+<line class="grid" x1="64" y1="137.3" x2="588" y2="137.3"/>
+<text class="tick" x="56" y="141.3" text-anchor="end">65</text>
+<line class="grid" x1="64" y1="92.0" x2="588" y2="92.0"/>
+<text class="tick" x="56" y="96.0" text-anchor="end">70</text>
+<line class="base" x1="64" y1="364" x2="588" y2="364"/>
+<text class="tick" x="105.9" y="382" text-anchor="middle">1000</text>
+<text class="tick" x="210.7" y="382" text-anchor="middle">1500</text>
+<text class="tick" x="315.5" y="382" text-anchor="middle">2000</text>
+<text class="tick" x="420.3" y="382" text-anchor="middle">2500</text>
+<text class="tick" x="525.1" y="382" text-anchor="middle">3000</text>
+<text class="axis-label" x="326.0" y="406" text-anchor="middle">Pump speed (rpm)</text>
+<text class="axis-label" transform="translate(16 228.0) rotate(-90)" text-anchor="middle">Package above liquid (°C)</text>
+<path class="s2-line" d="M93.8 124.6 L223.5 248.9 L322.9 288.7 L428.1 311.4 L545.2 306.0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle class="s2-dot ring" cx="93.8" cy="124.6" r="5" style="paint-order: stroke"/>
+<circle class="s2-dot ring" cx="223.5" cy="248.9" r="5" style="paint-order: stroke"/>
+<circle class="s2-dot ring" cx="322.9" cy="288.7" r="5" style="paint-order: stroke"/>
+<circle class="s2-dot ring" cx="428.1" cy="311.4" r="5" style="paint-order: stroke"/>
+<circle class="s2-dot ring" cx="545.2" cy="306.0" r="5" style="paint-order: stroke"/>
+<text class="label-muted" x="555.2" y="310.0">20 s burst</text>
+<path class="s1-line" d="M186.0 281.5 L224.1 289.7 L322.4 315.9 L426.8 325.0 L546.7 335.9" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle class="s1-dot ring" cx="186.0" cy="281.5" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="224.1" cy="289.7" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="322.4" cy="315.9" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="426.8" cy="325.0" r="5" style="paint-order: stroke"/>
+<circle class="s1-dot ring" cx="546.7" cy="335.9" r="5" style="paint-order: stroke"/>
+<text class="label-muted" x="556.7" y="339.9">Sustained</text>
+</svg>

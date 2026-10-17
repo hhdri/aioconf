@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420" role="img" aria-label="Kraken curves in /etc/aioconf.conf. Duty the firmware runs at each liquid temperature. 59 °C forces 100% as a failsafe.">
+<style>
+  .surface { fill: #fcfcfb; }
+  .title { fill: #0b0b0b; font: 600 17px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .sub { fill: #52514e; font: 13px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .tick { fill: #898781; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; }
+  .axis-label { fill: #52514e; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .label { fill: #0b0b0b; font: 600 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .label-muted { fill: #52514e; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .grid { stroke: #e1e0d9; stroke-width: 1; }
+  .base { stroke: #c3c2b7; stroke-width: 1; }
+  .ref { stroke: #898781; stroke-width: 1; }
+  .s1-line { stroke: #2a78d6; fill: none; }
+  .s2-line { stroke: #eb6834; fill: none; }
+  .s3-line { stroke: #1baf7a; fill: none; }
+  .s1-dot { fill: #2a78d6; }
+  .s2-dot { fill: #eb6834; }
+  .ring { stroke: #fcfcfb; stroke-width: 2; }
+  @media (prefers-color-scheme: dark) {
+    .surface { fill: #1a1a19; }
+    .title, .label { fill: #f0efec; }
+    .sub, .axis-label, .label-muted { fill: #c3c2b7; }
+    .grid { stroke: #2c2c2a; }
+    .base { stroke: #383835; }
+    .s1-line { stroke: #3987e5; }
+    .s2-line { stroke: #d95926; }
+    .s3-line { stroke: #199e70; }
+    .s1-dot { fill: #3987e5; }
+    .s2-dot { fill: #d95926; }
+    .ring { stroke: #1a1a19; }
+  }
+</style>
+<rect class="surface" width="720" height="420" rx="8"/>
+<text class="title" x="64" y="30">Kraken curves in /etc/aioconf.conf</text>
+<text class="sub" x="64" y="50">Duty the firmware runs at each liquid temperature. 59 °C forces 100% as a failsafe.</text>
+<line class="s1-line" x1="64" y1="70" x2="82" y2="70" stroke-width="2" stroke-linecap="round"/>
+<text class="label-muted" x="88" y="74">Pump</text>
+<line class="s2-line" x1="148" y1="70" x2="166" y2="70" stroke-width="2" stroke-linecap="round"/>
+<text class="label-muted" x="172" y="74">Fan</text>
+<line class="grid" x1="64" y1="364.0" x2="588" y2="364.0"/>
+<text class="tick" x="56" y="368.0" text-anchor="end">0%</text>
+<line class="grid" x1="64" y1="309.6" x2="588" y2="309.6"/>
+<text class="tick" x="56" y="313.6" text-anchor="end">20%</text>
+<line class="grid" x1="64" y1="255.2" x2="588" y2="255.2"/>
+<text class="tick" x="56" y="259.2" text-anchor="end">40%</text>
+<line class="grid" x1="64" y1="200.8" x2="588" y2="200.8"/>
+<text class="tick" x="56" y="204.8" text-anchor="end">60%</text>
+<line class="grid" x1="64" y1="146.4" x2="588" y2="146.4"/>
+<text class="tick" x="56" y="150.4" text-anchor="end">80%</text>
+<line class="grid" x1="64" y1="92.0" x2="588" y2="92.0"/>
+<text class="tick" x="56" y="96.0" text-anchor="end">100%</text>
+<line class="base" x1="64" y1="364" x2="588" y2="364"/>
+<text class="tick" x="64.0" y="382" text-anchor="middle">20</text>
+<text class="tick" x="129.5" y="382" text-anchor="middle">25</text>
+<text class="tick" x="195.0" y="382" text-anchor="middle">30</text>
+<text class="tick" x="260.5" y="382" text-anchor="middle">35</text>
+<text class="tick" x="326.0" y="382" text-anchor="middle">40</text>
+<text class="tick" x="391.5" y="382" text-anchor="middle">45</text>
+<text class="tick" x="457.0" y="382" text-anchor="middle">50</text>
+<text class="tick" x="522.5" y="382" text-anchor="middle">55</text>
+<text class="tick" x="588.0" y="382" text-anchor="middle">60</text>
+<text class="axis-label" x="326.0" y="406" text-anchor="middle">Liquid temperature (°C)</text>
+<text class="axis-label" transform="translate(16 228.0) rotate(-90)" text-anchor="middle">Duty (%)</text>
+<path class="s1-line" d="M64.0 282.4 L77.1 282.4 L90.2 282.4 L103.3 282.4 L116.4 282.4 L129.5 282.4 L142.6 282.4 L155.7 277.0 L168.8 274.2 L181.9 268.8 L195.0 263.4 L208.1 260.6 L221.2 255.2 L234.3 249.8 L247.4 241.6 L260.5 233.4 L273.6 228.0 L286.7 222.6 L299.8 214.4 L312.9 203.5 L326.0 192.6 L339.1 179.0 L352.2 168.2 L365.3 157.3 L378.4 146.4 L391.5 132.8 L404.6 119.2 L417.7 105.6 L430.8 92.0 L443.9 92.0 L457.0 92.0 L470.1 92.0 L483.2 92.0 L496.3 92.0 L509.4 92.0 L522.5 92.0 L535.6 92.0 L548.7 92.0 L561.8 92.0 L574.9 92.0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path class="s2-line" d="M64.0 296.0 L77.1 296.0 L90.2 296.0 L103.3 296.0 L116.4 296.0 L129.5 296.0 L142.6 296.0 L155.7 296.0 L168.8 296.0 L181.9 296.0 L195.0 296.0 L208.1 287.8 L221.2 282.4 L234.3 277.0 L247.4 268.8 L260.5 257.9 L273.6 249.8 L286.7 238.9 L299.8 228.0 L312.9 211.7 L326.0 195.4 L339.1 176.3 L352.2 160.0 L365.3 143.7 L378.4 124.6 L391.5 108.3 L404.6 92.0 L417.7 92.0 L430.8 92.0 L443.9 92.0 L457.0 92.0 L470.1 92.0 L483.2 92.0 L496.3 92.0 L509.4 92.0 L522.5 92.0 L535.6 92.0 L548.7 92.0 L561.8 92.0 L574.9 92.0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

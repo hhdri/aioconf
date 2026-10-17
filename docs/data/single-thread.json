@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "cpu": "Intel Core i9-14900K (8P+16E, Hyper-Threading off)",
+  "cooler": "NZXT Kraken 2023, 3-fan radiator, top exhaust",
+  "case": "NZXT H6 Flow, 3 front intake fans",
+  "room_c": 22,
+  "load": "stress-ng --cpu 24 --cpu-method matrixprod"
+ },
+ "single": [
+  {
+   "cpu": 4,
+   "max_mhz": 6000,
+   "mean_mhz": 5857,
+   "min_mhz": 5674,
+   "peak_mhz": 6000,
+   "pkg_max": 65.0,
+   "ops_s": 4234.23,
+   "watts": 69.1
+  },
+  {
+   "cpu": 0,
+   "max_mhz": 5700,
+   "mean_mhz": 5700,
+   "min_mhz": 5700,
+   "peak_mhz": 5700,
+   "pkg_max": 64.0,
+   "ops_s": 4071.37,
+   "watts": 61.4
+  },
+  {
+   "cpu": 8,
+   "max_mhz": 4400,
+   "mean_mhz": 4400,
+   "min_mhz": 4400,
+   "peak_mhz": 4400,
+   "pkg_max": 45.0,
+   "ops_s": 3705.16,
+   "watts": 47.6
+  }
+ ]
+}

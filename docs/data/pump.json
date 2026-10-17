@@ -1,0 +1,89 @@
+{
+ "meta": {
+  "cpu": "Intel Core i9-14900K (8P+16E, Hyper-Threading off)",
+  "cooler": "NZXT Kraken 2023, 3-fan radiator, top exhaust",
+  "case": "NZXT H6 Flow, 3 front intake fans",
+  "room_c": 22,
+  "load": "stress-ng --cpu 24 --cpu-method matrixprod"
+ },
+ "note": "rise = peak package temperature during a 20 s burst minus liquid temperature at its start; offset = sustained package minus liquid.",
+ "burst": [
+  {
+   "pump": 20,
+   "pump_rpm": 942,
+   "rise": 66.4,
+   "bursts": 1
+  },
+  {
+   "pump": 35,
+   "pump_rpm": 1561,
+   "rise": 52.7,
+   "bursts": 3
+  },
+  {
+   "pump": 50,
+   "pump_rpm": 2035,
+   "rise": 48.3,
+   "bursts": 3
+  },
+  {
+   "pump": 70,
+   "pump_rpm": 2537,
+   "rise": 45.8,
+   "bursts": 3
+  },
+  {
+   "pump": 100,
+   "pump_rpm": 3096,
+   "rise": 46.4,
+   "bursts": 1
+  }
+ ],
+ "sustained": [
+  {
+   "pump": 20,
+   "pump_rpm": 1382,
+   "liquid": 34.5,
+   "pkg_mean": 83.6,
+   "offset": 49.1,
+   "throttle_pct": 0.0,
+   "ops_s": 59437
+  },
+  {
+   "pump": 35,
+   "pump_rpm": 1564,
+   "liquid": 34.1,
+   "pkg_mean": 82.3,
+   "offset": 48.2,
+   "throttle_pct": 0.0,
+   "ops_s": 59992
+  },
+  {
+   "pump": 50,
+   "pump_rpm": 2033,
+   "liquid": 33.8,
+   "pkg_mean": 79.1,
+   "offset": 45.3,
+   "throttle_pct": 0.0,
+   "ops_s": 59169
+  },
+  {
+   "pump": 70,
+   "pump_rpm": 2531,
+   "liquid": 33.9,
+   "pkg_mean": 78.2,
+   "offset": 44.3,
+   "throttle_pct": 0.0,
+   "ops_s": 60338
+  },
+  {
+   "pump": 100,
+   "pump_rpm": 3103,
+   "liquid": 34.1,
+   "pkg_mean": 77.2,
+   "offset": 43.1,
+   "throttle_pct": 0.0,
+   "ops_s": 59839
+  }
+ ]
+}

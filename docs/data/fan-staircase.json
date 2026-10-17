@@ -1,0 +1,62 @@
+{
+ "meta": {
+  "cpu": "Intel Core i9-14900K (8P+16E, Hyper-Threading off)",
+  "cooler": "NZXT Kraken 2023, 3-fan radiator, top exhaust",
+  "case": "NZXT H6 Flow, 3 front intake fans",
+  "room_c": 22,
+  "load": "stress-ng --cpu 24 --cpu-method matrixprod"
+ },
+ "note": "Continuous 253 W load, pump 100%, each fan step held until liquid temperature changed < 0.15 \u00b0C/min.",
+ "steps": [
+  {
+   "fan": 100,
+   "fan_rpm": 1752,
+   "liquid": 28.0,
+   "pkg_mean": 71.2,
+   "pkg_max": 73.0,
+   "throttle_pct": 0.0,
+   "ops_s": 60795,
+   "mhz": 4467
+  },
+  {
+   "fan": 70,
+   "fan_rpm": 1296,
+   "liquid": 30.7,
+   "pkg_mean": 73.8,
+   "pkg_max": 75.0,
+   "throttle_pct": 0.0,
+   "ops_s": 60354,
+   "mhz": 4455
+  },
+  {
+   "fan": 50,
+   "fan_rpm": 1012,
+   "liquid": 33.7,
+   "pkg_mean": 76.7,
+   "pkg_max": 78.0,
+   "throttle_pct": 0.0,
+   "ops_s": 60458,
+   "mhz": 4450
+  },
+  {
+   "fan": 35,
+   "fan_rpm": 739,
+   "liquid": 39.6,
+   "pkg_mean": 82.8,
+   "pkg_max": 84.0,
+   "throttle_pct": 0.0,
+   "ops_s": 60226,
+   "mhz": 4425
+  },
+  {
+   "fan": 25,
+   "fan_rpm": 738,
+   "liquid": 40.0,
+   "pkg_mean": 83.0,
+   "pkg_max": 84.0,
+   "throttle_pct": 0.0,
+   "ops_s": 59955,
+   "mhz": 4429
+  }
+ ]
+}

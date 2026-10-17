@@ -1,0 +1,32 @@
+[package]
+name = "aioconf"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "GPL-3.0-or-later"
+description = "Pump and fan curves for the NZXT Kraken 2023 AIO, as a freestanding Linux binary: no libc, no crates, raw syscalls."
+repository = "https://github.com/hhdri/aioconf"
+readme = "README.md"
+keywords = ["nzxt", "kraken", "aio", "hidraw", "no-std"]
+categories = ["hardware-support", "command-line-utilities", "no-std"]
+
+# Protocol, curve math and config parsing. no_std, no allocation, unit-tested on the host.
+[lib]
+path = "src/lib.rs"
+
+# The freestanding binary: its own _start, raw syscalls, no libc.
+[[bin]]
+name = "aioconf"
+path = "src/main.rs"
+test = false
+bench = false
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true

@@ -1,0 +1,4648 @@
+{
+ "meta": {
+  "cpu": "Intel Core i9-14900K (8P+16E, Hyper-Threading off)",
+  "cooler": "NZXT Kraken 2023, 3-fan radiator, top exhaust",
+  "case": "NZXT H6 Flow, 3 front intake fans",
+  "room_c": 22,
+  "load": "stress-ng --cpu 24 --cpu-method matrixprod"
+ },
+ "limit_w": 180,
+ "note": "Kraken curves from contrib/aioconf.conf at a 180 W package limit. Front-fan readings are left out: header 1 was frozen by a ramp-time write during this run (see README). Reference throughput at 180 W with full cooling: 55,698 ops/s.",
+ "idle": {
+  "liquid_end": 23.3,
+  "pkg_max": 31.0,
+  "pkg_mean": 29.1,
+  "throttle_pct": 0.0,
+  "watts": 28.9,
+  "pump_rpm": 1371,
+  "fan_rpm": 707,
+  "pump_duty": 30,
+  "fan_duty": 25
+ },
+ "bursts": [
+  {
+   "liquid_end": 24.8,
+   "pkg_max": 62.0,
+   "pkg_mean": 59.5,
+   "throttle_pct": 0.0,
+   "watts": 180.0,
+   "pump_rpm": 1361,
+   "fan_rpm": 700,
+   "pump_duty": 30,
+   "fan_duty": 25,
+   "liquid_start": 23.4
+  },
+  {
+   "liquid_end": 26.2,
+   "pkg_max": 64.0,
+   "pkg_mean": 60.6,
+   "throttle_pct": 0.0,
+   "watts": 179.9,
+   "pump_rpm": 1372,
+   "fan_rpm": 699,
+   "pump_duty": 30,
+   "fan_duty": 25,
+   "liquid_start": 24.6
+  },
+  {
+   "liquid_end": 26.9,
+   "pkg_max": 64.0,
+   "pkg_mean": 61.1,
+   "throttle_pct": 0.0,
+   "watts": 180.0,
+   "pump_rpm": 1374,
+   "fan_rpm": 698,
+   "pump_duty": 30,
+   "fan_duty": 25,
+   "liquid_start": 25.5
+  },
+  {
+   "liquid_end": 27.2,
+   "pkg_max": 65.0,
+   "pkg_mean": 61.7,
+   "throttle_pct": 0.0,
+   "watts": 180.0,
+   "pump_rpm": 1378,
+   "fan_rpm": 696,
+   "pump_duty": 30,
+   "fan_duty": 25,
+   "liquid_start": 26.0
+  },
+  {
+   "liquid_end": 27.5,
+   "pkg_max": 65.0,
+   "pkg_mean": 62.3,
+   "throttle_pct": 0.0,
+   "watts": 180.0,
+   "pump_rpm": 1386,
+   "fan_rpm": 695,
+   "pump_duty": 31,
+   "fan_duty": 25,
+   "liquid_start": 26.3
+  }
+ ],
+ "sustained_last_3min": {
+  "liquid_end": 34.5,
+  "pkg_max": 67.0,
+  "pkg_mean": 66.1,
+  "throttle_pct": 0.0,
+  "watts": 180.0,
+  "pump_rpm": 1888,
+  "fan_rpm": 734,
+  "pump_duty": 45,
+  "fan_duty": 35
+ },
+ "sustained_ops_s_by_30s": [
+  55246,
+  55150,
+  55166,
+  55121,
+  55070,
+  55046,
+  55042,
+  55067,
+  55016,
+  55086,
+  55108,
+  54998,
+  55103,
+  55234,
+  54997,
+  55192,
+  55229,
+  55179,
+  55186,
+  55222
+ ],
+ "sustained_ops_s_last_3min": 55167,
+ "timeline": [
+  {
+   "t": 30.3,
+   "phase": "idle",
+   "pkg": 28.0,
+   "liquid": 22.7,
+   "pump_rpm": 3063,
+   "fan_rpm": 1754
+  },
+  {
+   "t": 32.3,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 22.7,
+   "pump_rpm": 2460,
+   "fan_rpm": 1142
+  },
+  {
+   "t": 34.3,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 22.7,
+   "pump_rpm": 1404,
+   "fan_rpm": 726
+  },
+  {
+   "t": 36.3,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 22.8,
+   "pump_rpm": 1311,
+   "fan_rpm": 704
+  },
+  {
+   "t": 38.3,
+   "phase": "idle",
+   "pkg": 30.0,
+   "liquid": 22.8,
+   "pump_rpm": 1320,
+   "fan_rpm": 703
+  },
+  {
+   "t": 40.4,
+   "phase": "idle",
+   "pkg": 40.0,
+   "liquid": 22.8,
+   "pump_rpm": 1329,
+   "fan_rpm": 705
+  },
+  {
+   "t": 42.4,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 22.8,
+   "pump_rpm": 1329,
+   "fan_rpm": 703
+  },
+  {
+   "t": 44.4,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 22.8,
+   "pump_rpm": 1329,
+   "fan_rpm": 703
+  },
+  {
+   "t": 46.4,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.0,
+   "pump_rpm": 1332,
+   "fan_rpm": 700
+  },
+  {
+   "t": 48.4,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.0,
+   "pump_rpm": 1335,
+   "fan_rpm": 700
+  },
+  {
+   "t": 50.5,
+   "phase": "idle",
+   "pkg": 30.0,
+   "liquid": 23.1,
+   "pump_rpm": 1344,
+   "fan_rpm": 703
+  },
+  {
+   "t": 52.5,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.1,
+   "pump_rpm": 1347,
+   "fan_rpm": 701
+  },
+  {
+   "t": 54.5,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.1,
+   "pump_rpm": 1344,
+   "fan_rpm": 709
+  },
+  {
+   "t": 56.5,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.1,
+   "pump_rpm": 1353,
+   "fan_rpm": 710
+  },
+  {
+   "t": 58.5,
+   "phase": "idle",
+   "pkg": 28.0,
+   "liquid": 23.1,
+   "pump_rpm": 1356,
+   "fan_rpm": 706
+  },
+  {
+   "t": 60.5,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.1,
+   "pump_rpm": 1359,
+   "fan_rpm": 705
+  },
+  {
+   "t": 62.6,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.1,
+   "pump_rpm": 1362,
+   "fan_rpm": 710
+  },
+  {
+   "t": 64.6,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.1,
+   "pump_rpm": 1362,
+   "fan_rpm": 709
+  },
+  {
+   "t": 66.6,
+   "phase": "idle",
+   "pkg": 30.0,
+   "liquid": 23.2,
+   "pump_rpm": 1362,
+   "fan_rpm": 707
+  },
+  {
+   "t": 68.6,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1365,
+   "fan_rpm": 706
+  },
+  {
+   "t": 70.7,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1368,
+   "fan_rpm": 707
+  },
+  {
+   "t": 72.7,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1365,
+   "fan_rpm": 709
+  },
+  {
+   "t": 74.7,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1365,
+   "fan_rpm": 710
+  },
+  {
+   "t": 76.7,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1362,
+   "fan_rpm": 707
+  },
+  {
+   "t": 78.7,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1365,
+   "fan_rpm": 704
+  },
+  {
+   "t": 80.8,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1365,
+   "fan_rpm": 711
+  },
+  {
+   "t": 82.8,
+   "phase": "idle",
+   "pkg": 31.0,
+   "liquid": 23.2,
+   "pump_rpm": 1365,
+   "fan_rpm": 710
+  },
+  {
+   "t": 84.8,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1371,
+   "fan_rpm": 705
+  },
+  {
+   "t": 86.8,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1371,
+   "fan_rpm": 705
+  },
+  {
+   "t": 88.8,
+   "phase": "idle",
+   "pkg": 28.0,
+   "liquid": 23.2,
+   "pump_rpm": 1371,
+   "fan_rpm": 710
+  },
+  {
+   "t": 90.8,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1368,
+   "fan_rpm": 710
+  },
+  {
+   "t": 92.9,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.2,
+   "pump_rpm": 1371,
+   "fan_rpm": 705
+  },
+  {
+   "t": 94.9,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1365,
+   "fan_rpm": 706
+  },
+  {
+   "t": 96.9,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1365,
+   "fan_rpm": 710
+  },
+  {
+   "t": 98.9,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1371,
+   "fan_rpm": 712
+  },
+  {
+   "t": 100.9,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1374,
+   "fan_rpm": 710
+  },
+  {
+   "t": 103.0,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1371,
+   "fan_rpm": 708
+  },
+  {
+   "t": 105.0,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1368,
+   "fan_rpm": 699
+  },
+  {
+   "t": 107.0,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1365,
+   "fan_rpm": 708
+  },
+  {
+   "t": 109.0,
+   "phase": "idle",
+   "pkg": 28.0,
+   "liquid": 23.3,
+   "pump_rpm": 1371,
+   "fan_rpm": 705
+  },
+  {
+   "t": 111.0,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1380,
+   "fan_rpm": 705
+  },
+  {
+   "t": 113.0,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1377,
+   "fan_rpm": 707
+  },
+  {
+   "t": 115.1,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1374,
+   "fan_rpm": 710
+  },
+  {
+   "t": 117.1,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.3,
+   "pump_rpm": 1374,
+   "fan_rpm": 703
+  },
+  {
+   "t": 119.1,
+   "phase": "idle",
+   "pkg": 29.0,
+   "liquid": 23.4,
+   "pump_rpm": 1365,
+   "fan_rpm": 702
+  },
+  {
+   "t": 121.1,
+   "phase": "burst1",
+   "pkg": 52.0,
+   "liquid": 23.4,
+   "pump_rpm": 1371,
+   "fan_rpm": 710
+  },
+  {
+   "t": 123.1,
+   "phase": "burst1",
+   "pkg": 59.0,
+   "liquid": 23.4,
+   "pump_rpm": 1371,
+   "fan_rpm": 703
+  },
+  {
+   "t": 125.2,
+   "phase": "burst1",
+   "pkg": 60.0,
+   "liquid": 23.4,
+   "pump_rpm": 1356,
+   "fan_rpm": 697
+  },
+  {
+   "t": 127.2,
+   "phase": "burst1",
+   "pkg": 60.0,
+   "liquid": 23.5,
+   "pump_rpm": 1353,
+   "fan_rpm": 702
+  },
+  {
+   "t": 129.2,
+   "phase": "burst1",
+   "pkg": 62.0,
+   "liquid": 23.7,
+   "pump_rpm": 1353,
+   "fan_rpm": 696
+  },
+  {
+   "t": 131.2,
+   "phase": "burst1",
+   "pkg": 61.0,
+   "liquid": 24.0,
+   "pump_rpm": 1359,
+   "fan_rpm": 697
+  },
+  {
+   "t": 133.2,
+   "phase": "burst1",
+   "pkg": 62.0,
+   "liquid": 24.2,
+   "pump_rpm": 1362,
+   "fan_rpm": 701
+  },
+  {
+   "t": 135.2,
+   "phase": "burst1",
+   "pkg": 62.0,
+   "liquid": 24.4,
+   "pump_rpm": 1365,
+   "fan_rpm": 697
+  },
+  {
+   "t": 137.2,
+   "phase": "burst1",
+   "pkg": 61.0,
+   "liquid": 24.6,
+   "pump_rpm": 1359,
+   "fan_rpm": 700
+  },
+  {
+   "t": 139.2,
+   "phase": "burst1",
+   "pkg": 62.0,
+   "liquid": 24.8,
+   "pump_rpm": 1356,
+   "fan_rpm": 701
+  },
+  {
+   "t": 141.2,
+   "phase": "gap1",
+   "pkg": 35.0,
+   "liquid": 25.1,
+   "pump_rpm": 1365,
+   "fan_rpm": 703
+  },
+  {
+   "t": 143.2,
+   "phase": "gap1",
+   "pkg": 32.0,
+   "liquid": 25.3,
+   "pump_rpm": 1371,
+   "fan_rpm": 709
+  },
+  {
+   "t": 145.3,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 25.4,
+   "pump_rpm": 1374,
+   "fan_rpm": 709
+  },
+  {
+   "t": 147.3,
+   "phase": "gap1",
+   "pkg": 31.0,
+   "liquid": 25.4,
+   "pump_rpm": 1380,
+   "fan_rpm": 705
+  },
+  {
+   "t": 149.3,
+   "phase": "gap1",
+   "pkg": 34.0,
+   "liquid": 25.4,
+   "pump_rpm": 1380,
+   "fan_rpm": 704
+  },
+  {
+   "t": 151.3,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 25.3,
+   "pump_rpm": 1377,
+   "fan_rpm": 705
+  },
+  {
+   "t": 153.3,
+   "phase": "gap1",
+   "pkg": 36.0,
+   "liquid": 25.2,
+   "pump_rpm": 1377,
+   "fan_rpm": 710
+  },
+  {
+   "t": 155.4,
+   "phase": "gap1",
+   "pkg": 29.0,
+   "liquid": 25.2,
+   "pump_rpm": 1380,
+   "fan_rpm": 705
+  },
+  {
+   "t": 157.4,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 25.1,
+   "pump_rpm": 1380,
+   "fan_rpm": 705
+  },
+  {
+   "t": 159.4,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 25.0,
+   "pump_rpm": 1386,
+   "fan_rpm": 710
+  },
+  {
+   "t": 161.4,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 24.8,
+   "pump_rpm": 1386,
+   "fan_rpm": 708
+  },
+  {
+   "t": 163.4,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 24.8,
+   "pump_rpm": 1380,
+   "fan_rpm": 705
+  },
+  {
+   "t": 165.4,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 24.7,
+   "pump_rpm": 1380,
+   "fan_rpm": 705
+  },
+  {
+   "t": 167.5,
+   "phase": "gap1",
+   "pkg": 29.0,
+   "liquid": 24.7,
+   "pump_rpm": 1380,
+   "fan_rpm": 710
+  },
+  {
+   "t": 169.5,
+   "phase": "gap1",
+   "pkg": 32.0,
+   "liquid": 24.7,
+   "pump_rpm": 1383,
+   "fan_rpm": 711
+  },
+  {
+   "t": 171.5,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 24.6,
+   "pump_rpm": 1383,
+   "fan_rpm": 705
+  },
+  {
+   "t": 173.5,
+   "phase": "gap1",
+   "pkg": 29.0,
+   "liquid": 24.6,
+   "pump_rpm": 1386,
+   "fan_rpm": 704
+  },
+  {
+   "t": 175.5,
+   "phase": "gap1",
+   "pkg": 29.0,
+   "liquid": 24.6,
+   "pump_rpm": 1383,
+   "fan_rpm": 710
+  },
+  {
+   "t": 177.6,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 24.6,
+   "pump_rpm": 1383,
+   "fan_rpm": 708
+  },
+  {
+   "t": 179.6,
+   "phase": "gap1",
+   "pkg": 30.0,
+   "liquid": 24.6,
+   "pump_rpm": 1386,
+   "fan_rpm": 703
+  },
+  {
+   "t": 181.6,
+   "phase": "burst2",
+   "pkg": 57.0,
+   "liquid": 24.6,
+   "pump_rpm": 1389,
+   "fan_rpm": 700
+  },
+  {
+   "t": 183.6,
+   "phase": "burst2",
+   "pkg": 60.0,
+   "liquid": 24.7,
+   "pump_rpm": 1380,
+   "fan_rpm": 698
+  },
+  {
+   "t": 185.6,
+   "phase": "burst2",
+   "pkg": 62.0,
+   "liquid": 24.7,
+   "pump_rpm": 1374,
+   "fan_rpm": 696
+  },
+  {
+   "t": 187.6,
+   "phase": "burst2",
+   "pkg": 64.0,
+   "liquid": 25.0,
+   "pump_rpm": 1365,
+   "fan_rpm": 700
+  },
+  {
+   "t": 189.6,
+   "phase": "burst2",
+   "pkg": 62.0,
+   "liquid": 25.2,
+   "pump_rpm": 1368,
+   "fan_rpm": 696
+  },
+  {
+   "t": 191.6,
+   "phase": "burst2",
+   "pkg": 62.0,
+   "liquid": 25.4,
+   "pump_rpm": 1365,
+   "fan_rpm": 700
+  },
+  {
+   "t": 193.6,
+   "phase": "burst2",
+   "pkg": 64.0,
+   "liquid": 25.7,
+   "pump_rpm": 1368,
+   "fan_rpm": 700
+  },
+  {
+   "t": 195.6,
+   "phase": "burst2",
+   "pkg": 62.0,
+   "liquid": 25.9,
+   "pump_rpm": 1371,
+   "fan_rpm": 696
+  },
+  {
+   "t": 197.7,
+   "phase": "burst2",
+   "pkg": 62.0,
+   "liquid": 26.1,
+   "pump_rpm": 1371,
+   "fan_rpm": 700
+  },
+  {
+   "t": 199.7,
+   "phase": "gap2",
+   "pkg": 40.0,
+   "liquid": 26.4,
+   "pump_rpm": 1371,
+   "fan_rpm": 696
+  },
+  {
+   "t": 201.7,
+   "phase": "gap2",
+   "pkg": 35.0,
+   "liquid": 26.5,
+   "pump_rpm": 1374,
+   "fan_rpm": 703
+  },
+  {
+   "t": 203.7,
+   "phase": "gap2",
+   "pkg": 32.0,
+   "liquid": 26.6,
+   "pump_rpm": 1383,
+   "fan_rpm": 709
+  },
+  {
+   "t": 205.7,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 26.6,
+   "pump_rpm": 1386,
+   "fan_rpm": 707
+  },
+  {
+   "t": 207.7,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 26.6,
+   "pump_rpm": 1386,
+   "fan_rpm": 702
+  },
+  {
+   "t": 209.8,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 26.6,
+   "pump_rpm": 1383,
+   "fan_rpm": 710
+  },
+  {
+   "t": 211.8,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 26.5,
+   "pump_rpm": 1383,
+   "fan_rpm": 708
+  },
+  {
+   "t": 213.8,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 26.3,
+   "pump_rpm": 1383,
+   "fan_rpm": 705
+  },
+  {
+   "t": 215.8,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 26.3,
+   "pump_rpm": 1389,
+   "fan_rpm": 704
+  },
+  {
+   "t": 217.8,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 26.2,
+   "pump_rpm": 1389,
+   "fan_rpm": 707
+  },
+  {
+   "t": 219.8,
+   "phase": "gap2",
+   "pkg": 29.0,
+   "liquid": 26.1,
+   "pump_rpm": 1386,
+   "fan_rpm": 708
+  },
+  {
+   "t": 221.8,
+   "phase": "gap2",
+   "pkg": 29.0,
+   "liquid": 26.0,
+   "pump_rpm": 1386,
+   "fan_rpm": 702
+  },
+  {
+   "t": 223.9,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 25.9,
+   "pump_rpm": 1386,
+   "fan_rpm": 703
+  },
+  {
+   "t": 225.9,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 25.8,
+   "pump_rpm": 1389,
+   "fan_rpm": 707
+  },
+  {
+   "t": 227.9,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 25.7,
+   "pump_rpm": 1386,
+   "fan_rpm": 707
+  },
+  {
+   "t": 229.9,
+   "phase": "gap2",
+   "pkg": 32.0,
+   "liquid": 25.7,
+   "pump_rpm": 1386,
+   "fan_rpm": 703
+  },
+  {
+   "t": 231.9,
+   "phase": "gap2",
+   "pkg": 32.0,
+   "liquid": 25.6,
+   "pump_rpm": 1386,
+   "fan_rpm": 708
+  },
+  {
+   "t": 234.0,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 25.6,
+   "pump_rpm": 1389,
+   "fan_rpm": 709
+  },
+  {
+   "t": 236.0,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 25.6,
+   "pump_rpm": 1392,
+   "fan_rpm": 703
+  },
+  {
+   "t": 238.0,
+   "phase": "gap2",
+   "pkg": 30.0,
+   "liquid": 25.6,
+   "pump_rpm": 1389,
+   "fan_rpm": 704
+  },
+  {
+   "t": 240.0,
+   "phase": "burst3",
+   "pkg": 54.0,
+   "liquid": 25.5,
+   "pump_rpm": 1386,
+   "fan_rpm": 707
+  },
+  {
+   "t": 242.0,
+   "phase": "burst3",
+   "pkg": 61.0,
+   "liquid": 25.6,
+   "pump_rpm": 1380,
+   "fan_rpm": 700
+  },
+  {
+   "t": 244.1,
+   "phase": "burst3",
+   "pkg": 62.0,
+   "liquid": 25.6,
+   "pump_rpm": 1368,
+   "fan_rpm": 696
+  },
+  {
+   "t": 246.1,
+   "phase": "burst3",
+   "pkg": 64.0,
+   "liquid": 25.7,
+   "pump_rpm": 1374,
+   "fan_rpm": 698
+  },
+  {
+   "t": 248.1,
+   "phase": "burst3",
+   "pkg": 62.0,
+   "liquid": 25.9,
+   "pump_rpm": 1374,
+   "fan_rpm": 696
+  },
+  {
+   "t": 250.1,
+   "phase": "burst3",
+   "pkg": 62.0,
+   "liquid": 26.0,
+   "pump_rpm": 1374,
+   "fan_rpm": 698
+  },
+  {
+   "t": 252.1,
+   "phase": "burst3",
+   "pkg": 62.0,
+   "liquid": 26.2,
+   "pump_rpm": 1377,
+   "fan_rpm": 695
+  },
+  {
+   "t": 254.1,
+   "phase": "burst3",
+   "pkg": 64.0,
+   "liquid": 26.5,
+   "pump_rpm": 1374,
+   "fan_rpm": 694
+  },
+  {
+   "t": 256.1,
+   "phase": "burst3",
+   "pkg": 64.0,
+   "liquid": 26.7,
+   "pump_rpm": 1368,
+   "fan_rpm": 699
+  },
+  {
+   "t": 258.1,
+   "phase": "burst3",
+   "pkg": 64.0,
+   "liquid": 26.9,
+   "pump_rpm": 1365,
+   "fan_rpm": 695
+  },
+  {
+   "t": 260.1,
+   "phase": "gap3",
+   "pkg": 37.0,
+   "liquid": 27.1,
+   "pump_rpm": 1392,
+   "fan_rpm": 703
+  },
+  {
+   "t": 262.1,
+   "phase": "gap3",
+   "pkg": 33.0,
+   "liquid": 27.2,
+   "pump_rpm": 1446,
+   "fan_rpm": 702
+  },
+  {
+   "t": 264.2,
+   "phase": "gap3",
+   "pkg": 32.0,
+   "liquid": 27.2,
+   "pump_rpm": 1458,
+   "fan_rpm": 701
+  },
+  {
+   "t": 266.2,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 27.3,
+   "pump_rpm": 1458,
+   "fan_rpm": 710
+  },
+  {
+   "t": 268.2,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 27.2,
+   "pump_rpm": 1458,
+   "fan_rpm": 701
+  },
+  {
+   "t": 270.2,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 27.1,
+   "pump_rpm": 1455,
+   "fan_rpm": 703
+  },
+  {
+   "t": 272.2,
+   "phase": "gap3",
+   "pkg": 32.0,
+   "liquid": 27.0,
+   "pump_rpm": 1455,
+   "fan_rpm": 707
+  },
+  {
+   "t": 274.2,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.8,
+   "pump_rpm": 1425,
+   "fan_rpm": 708
+  },
+  {
+   "t": 276.3,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.7,
+   "pump_rpm": 1389,
+   "fan_rpm": 703
+  },
+  {
+   "t": 278.3,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.6,
+   "pump_rpm": 1389,
+   "fan_rpm": 700
+  },
+  {
+   "t": 280.3,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.5,
+   "pump_rpm": 1389,
+   "fan_rpm": 705
+  },
+  {
+   "t": 282.3,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.4,
+   "pump_rpm": 1389,
+   "fan_rpm": 701
+  },
+  {
+   "t": 284.3,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.3,
+   "pump_rpm": 1389,
+   "fan_rpm": 701
+  },
+  {
+   "t": 286.4,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.2,
+   "pump_rpm": 1392,
+   "fan_rpm": 704
+  },
+  {
+   "t": 288.4,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.2,
+   "pump_rpm": 1389,
+   "fan_rpm": 700
+  },
+  {
+   "t": 290.4,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.1,
+   "pump_rpm": 1389,
+   "fan_rpm": 702
+  },
+  {
+   "t": 292.4,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.1,
+   "pump_rpm": 1389,
+   "fan_rpm": 705
+  },
+  {
+   "t": 294.4,
+   "phase": "gap3",
+   "pkg": 31.0,
+   "liquid": 26.0,
+   "pump_rpm": 1386,
+   "fan_rpm": 706
+  },
+  {
+   "t": 296.5,
+   "phase": "gap3",
+   "pkg": 30.0,
+   "liquid": 26.0,
+   "pump_rpm": 1389,
+   "fan_rpm": 701
+  },
+  {
+   "t": 298.5,
+   "phase": "gap3",
+   "pkg": 31.0,
+   "liquid": 26.0,
+   "pump_rpm": 1386,
+   "fan_rpm": 703
+  },
+  {
+   "t": 300.5,
+   "phase": "burst4",
+   "pkg": 59.0,
+   "liquid": 26.0,
+   "pump_rpm": 1380,
+   "fan_rpm": 701
+  },
+  {
+   "t": 302.5,
+   "phase": "burst4",
+   "pkg": 62.0,
+   "liquid": 26.0,
+   "pump_rpm": 1371,
+   "fan_rpm": 695
+  },
+  {
+   "t": 304.5,
+   "phase": "burst4",
+   "pkg": 62.0,
+   "liquid": 26.0,
+   "pump_rpm": 1371,
+   "fan_rpm": 697
+  },
+  {
+   "t": 306.5,
+   "phase": "burst4",
+   "pkg": 64.0,
+   "liquid": 26.2,
+   "pump_rpm": 1374,
+   "fan_rpm": 695
+  },
+  {
+   "t": 308.5,
+   "phase": "burst4",
+   "pkg": 64.0,
+   "liquid": 26.4,
+   "pump_rpm": 1374,
+   "fan_rpm": 697
+  },
+  {
+   "t": 310.6,
+   "phase": "burst4",
+   "pkg": 64.0,
+   "liquid": 26.6,
+   "pump_rpm": 1371,
+   "fan_rpm": 693
+  },
+  {
+   "t": 312.6,
+   "phase": "burst4",
+   "pkg": 65.0,
+   "liquid": 26.8,
+   "pump_rpm": 1374,
+   "fan_rpm": 698
+  },
+  {
+   "t": 314.6,
+   "phase": "burst4",
+   "pkg": 64.0,
+   "liquid": 27.0,
+   "pump_rpm": 1374,
+   "fan_rpm": 696
+  },
+  {
+   "t": 316.6,
+   "phase": "burst4",
+   "pkg": 64.0,
+   "liquid": 27.1,
+   "pump_rpm": 1398,
+   "fan_rpm": 693
+  },
+  {
+   "t": 318.6,
+   "phase": "gap4",
+   "pkg": 40.0,
+   "liquid": 27.3,
+   "pump_rpm": 1434,
+   "fan_rpm": 697
+  },
+  {
+   "t": 320.6,
+   "phase": "gap4",
+   "pkg": 34.0,
+   "liquid": 27.5,
+   "pump_rpm": 1446,
+   "fan_rpm": 698
+  },
+  {
+   "t": 322.6,
+   "phase": "gap4",
+   "pkg": 32.0,
+   "liquid": 27.6,
+   "pump_rpm": 1455,
+   "fan_rpm": 704
+  },
+  {
+   "t": 324.6,
+   "phase": "gap4",
+   "pkg": 34.0,
+   "liquid": 27.6,
+   "pump_rpm": 1455,
+   "fan_rpm": 700
+  },
+  {
+   "t": 326.6,
+   "phase": "gap4",
+   "pkg": 32.0,
+   "liquid": 27.5,
+   "pump_rpm": 1458,
+   "fan_rpm": 700
+  },
+  {
+   "t": 328.7,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 27.4,
+   "pump_rpm": 1455,
+   "fan_rpm": 704
+  },
+  {
+   "t": 330.7,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 27.2,
+   "pump_rpm": 1455,
+   "fan_rpm": 700
+  },
+  {
+   "t": 332.7,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 27.2,
+   "pump_rpm": 1452,
+   "fan_rpm": 701
+  },
+  {
+   "t": 334.7,
+   "phase": "gap4",
+   "pkg": 35.0,
+   "liquid": 27.0,
+   "pump_rpm": 1452,
+   "fan_rpm": 706
+  },
+  {
+   "t": 336.7,
+   "phase": "gap4",
+   "pkg": 30.0,
+   "liquid": 26.9,
+   "pump_rpm": 1455,
+   "fan_rpm": 708
+  },
+  {
+   "t": 338.8,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 26.8,
+   "pump_rpm": 1419,
+   "fan_rpm": 701
+  },
+  {
+   "t": 340.8,
+   "phase": "gap4",
+   "pkg": 30.0,
+   "liquid": 26.8,
+   "pump_rpm": 1386,
+   "fan_rpm": 705
+  },
+  {
+   "t": 342.8,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 26.6,
+   "pump_rpm": 1389,
+   "fan_rpm": 705
+  },
+  {
+   "t": 344.8,
+   "phase": "gap4",
+   "pkg": 32.0,
+   "liquid": 26.6,
+   "pump_rpm": 1389,
+   "fan_rpm": 700
+  },
+  {
+   "t": 346.8,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 26.5,
+   "pump_rpm": 1386,
+   "fan_rpm": 705
+  },
+  {
+   "t": 348.9,
+   "phase": "gap4",
+   "pkg": 32.0,
+   "liquid": 26.4,
+   "pump_rpm": 1389,
+   "fan_rpm": 705
+  },
+  {
+   "t": 350.9,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 26.3,
+   "pump_rpm": 1392,
+   "fan_rpm": 698
+  },
+  {
+   "t": 352.9,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 26.3,
+   "pump_rpm": 1389,
+   "fan_rpm": 703
+  },
+  {
+   "t": 354.9,
+   "phase": "gap4",
+   "pkg": 31.0,
+   "liquid": 26.3,
+   "pump_rpm": 1386,
+   "fan_rpm": 703
+  },
+  {
+   "t": 356.9,
+   "phase": "gap4",
+   "pkg": 30.0,
+   "liquid": 26.3,
+   "pump_rpm": 1389,
+   "fan_rpm": 699
+  },
+  {
+   "t": 359.0,
+   "phase": "burst5",
+   "pkg": 56.0,
+   "liquid": 26.3,
+   "pump_rpm": 1389,
+   "fan_rpm": 705
+  },
+  {
+   "t": 361.0,
+   "phase": "burst5",
+   "pkg": 61.0,
+   "liquid": 26.3,
+   "pump_rpm": 1389,
+   "fan_rpm": 696
+  },
+  {
+   "t": 363.0,
+   "phase": "burst5",
+   "pkg": 64.0,
+   "liquid": 26.3,
+   "pump_rpm": 1374,
+   "fan_rpm": 696
+  },
+  {
+   "t": 365.0,
+   "phase": "burst5",
+   "pkg": 64.0,
+   "liquid": 26.4,
+   "pump_rpm": 1371,
+   "fan_rpm": 695
+  },
+  {
+   "t": 367.0,
+   "phase": "burst5",
+   "pkg": 65.0,
+   "liquid": 26.5,
+   "pump_rpm": 1368,
+   "fan_rpm": 691
+  },
+  {
+   "t": 369.0,
+   "phase": "burst5",
+   "pkg": 64.0,
+   "liquid": 26.7,
+   "pump_rpm": 1365,
+   "fan_rpm": 696
+  },
+  {
+   "t": 371.0,
+   "phase": "burst5",
+   "pkg": 64.0,
+   "liquid": 26.9,
+   "pump_rpm": 1371,
+   "fan_rpm": 691
+  },
+  {
+   "t": 373.0,
+   "phase": "burst5",
+   "pkg": 62.0,
+   "liquid": 27.1,
+   "pump_rpm": 1386,
+   "fan_rpm": 696
+  },
+  {
+   "t": 375.0,
+   "phase": "burst5",
+   "pkg": 64.0,
+   "liquid": 27.3,
+   "pump_rpm": 1425,
+   "fan_rpm": 693
+  },
+  {
+   "t": 377.1,
+   "phase": "burst5",
+   "pkg": 64.0,
+   "liquid": 27.5,
+   "pump_rpm": 1434,
+   "fan_rpm": 696
+  },
+  {
+   "t": 379.1,
+   "phase": "gap5",
+   "pkg": 37.0,
+   "liquid": 27.6,
+   "pump_rpm": 1440,
+   "fan_rpm": 695
+  },
+  {
+   "t": 381.1,
+   "phase": "gap5",
+   "pkg": 33.0,
+   "liquid": 27.7,
+   "pump_rpm": 1449,
+   "fan_rpm": 705
+  },
+  {
+   "t": 383.1,
+   "phase": "gap5",
+   "pkg": 32.0,
+   "liquid": 27.8,
+   "pump_rpm": 1452,
+   "fan_rpm": 703
+  },
+  {
+   "t": 385.1,
+   "phase": "gap5",
+   "pkg": 31.0,
+   "liquid": 27.7,
+   "pump_rpm": 1455,
+   "fan_rpm": 698
+  },
+  {
+   "t": 387.1,
+   "phase": "gap5",
+   "pkg": 30.0,
+   "liquid": 27.6,
+   "pump_rpm": 1452,
+   "fan_rpm": 705
+  },
+  {
+   "t": 389.1,
+   "phase": "gap5",
+   "pkg": 31.0,
+   "liquid": 27.5,
+   "pump_rpm": 1458,
+   "fan_rpm": 703
+  },
+  {
+   "t": 391.2,
+   "phase": "gap5",
+   "pkg": 31.0,
+   "liquid": 27.4,
+   "pump_rpm": 1452,
+   "fan_rpm": 699
+  },
+  {
+   "t": 393.2,
+   "phase": "gap5",
+   "pkg": 30.0,
+   "liquid": 27.3,
+   "pump_rpm": 1455,
+   "fan_rpm": 701
+  },
+  {
+   "t": 395.2,
+   "phase": "gap5",
+   "pkg": 30.0,
+   "liquid": 27.1,
+   "pump_rpm": 1455,
+   "fan_rpm": 700
+  },
+  {
+   "t": 397.2,
+   "phase": "gap5",
+   "pkg": 31.0,
+   "liquid": 27.0,
+   "pump_rpm": 1455,
+   "fan_rpm": 698
+  },
+  {
+   "t": 399.2,
+   "phase": "gap5",
+   "pkg": 30.0,
+   "liquid": 26.9,
+   "pump_rpm": 1452,
+   "fan_rpm": 705
+  },
+  {
+   "t": 401.3,
+   "phase": "gap5",
+   "pkg": 31.0,
+   "liquid": 26.8,
+   "pump_rpm": 1416,
+   "fan_rpm": 698
+  },
+  {
+   "t": 403.3,
+   "phase": "gap5",
+   "pkg": 32.0,
+   "liquid": 26.7,
+   "pump_rpm": 1392,
+   "fan_rpm": 698
+  },
+  {
+   "t": 405.3,
+   "phase": "gap5",
+   "pkg": 31.0,
+   "liquid": 26.6,
+   "pump_rpm": 1389,
+   "fan_rpm": 703
+  },
+  {
+   "t": 407.3,
+   "phase": "gap5",
+   "pkg": 32.0,
+   "liquid": 26.5,
+   "pump_rpm": 1386,
+   "fan_rpm": 697
+  },
+  {
+   "t": 409.4,
+   "phase": "gap5",
+   "pkg": 31.0,
+   "liquid": 26.5,
+   "pump_rpm": 1389,
+   "fan_rpm": 701
+  },
+  {
+   "t": 411.4,
+   "phase": "gap5",
+   "pkg": 31.0,
+   "liquid": 26.5,
+   "pump_rpm": 1383,
+   "fan_rpm": 702
+  },
+  {
+   "t": 413.4,
+   "phase": "gap5",
+   "pkg": 30.0,
+   "liquid": 26.4,
+   "pump_rpm": 1386,
+   "fan_rpm": 700
+  },
+  {
+   "t": 415.4,
+   "phase": "gap5",
+   "pkg": 30.0,
+   "liquid": 26.4,
+   "pump_rpm": 1386,
+   "fan_rpm": 701
+  },
+  {
+   "t": 417.4,
+   "phase": "gap5",
+   "pkg": 30.0,
+   "liquid": 26.4,
+   "pump_rpm": 1392,
+   "fan_rpm": 701
+  },
+  {
+   "t": 419.4,
+   "phase": "sustained",
+   "pkg": 60.0,
+   "liquid": 26.4,
+   "pump_rpm": 1392,
+   "fan_rpm": 695
+  },
+  {
+   "t": 421.5,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 26.4,
+   "pump_rpm": 1383,
+   "fan_rpm": 696
+  },
+  {
+   "t": 423.5,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 26.4,
+   "pump_rpm": 1374,
+   "fan_rpm": 690
+  },
+  {
+   "t": 425.5,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 26.6,
+   "pump_rpm": 1374,
+   "fan_rpm": 696
+  },
+  {
+   "t": 427.5,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 26.7,
+   "pump_rpm": 1374,
+   "fan_rpm": 691
+  },
+  {
+   "t": 429.5,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 26.9,
+   "pump_rpm": 1374,
+   "fan_rpm": 695
+  },
+  {
+   "t": 431.5,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 27.1,
+   "pump_rpm": 1404,
+   "fan_rpm": 690
+  },
+  {
+   "t": 433.5,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 27.3,
+   "pump_rpm": 1440,
+   "fan_rpm": 694
+  },
+  {
+   "t": 435.5,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 27.4,
+   "pump_rpm": 1434,
+   "fan_rpm": 691
+  },
+  {
+   "t": 437.5,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 27.6,
+   "pump_rpm": 1434,
+   "fan_rpm": 695
+  },
+  {
+   "t": 439.5,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 27.7,
+   "pump_rpm": 1440,
+   "fan_rpm": 689
+  },
+  {
+   "t": 441.6,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 27.9,
+   "pump_rpm": 1434,
+   "fan_rpm": 695
+  },
+  {
+   "t": 443.6,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 28.0,
+   "pump_rpm": 1437,
+   "fan_rpm": 692
+  },
+  {
+   "t": 445.6,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 28.1,
+   "pump_rpm": 1470,
+   "fan_rpm": 694
+  },
+  {
+   "t": 447.6,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 28.1,
+   "pump_rpm": 1485,
+   "fan_rpm": 690
+  },
+  {
+   "t": 449.6,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 28.2,
+   "pump_rpm": 1482,
+   "fan_rpm": 694
+  },
+  {
+   "t": 451.6,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 28.3,
+   "pump_rpm": 1488,
+   "fan_rpm": 691
+  },
+  {
+   "t": 453.6,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 28.4,
+   "pump_rpm": 1482,
+   "fan_rpm": 693
+  },
+  {
+   "t": 455.6,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 28.4,
+   "pump_rpm": 1482,
+   "fan_rpm": 692
+  },
+  {
+   "t": 457.6,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 28.5,
+   "pump_rpm": 1485,
+   "fan_rpm": 694
+  },
+  {
+   "t": 459.6,
+   "phase": "sustained",
+   "pkg": 63.0,
+   "liquid": 28.5,
+   "pump_rpm": 1488,
+   "fan_rpm": 689
+  },
+  {
+   "t": 461.6,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 28.6,
+   "pump_rpm": 1488,
+   "fan_rpm": 695
+  },
+  {
+   "t": 463.6,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 28.7,
+   "pump_rpm": 1488,
+   "fan_rpm": 691
+  },
+  {
+   "t": 465.6,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 28.7,
+   "pump_rpm": 1485,
+   "fan_rpm": 694
+  },
+  {
+   "t": 467.7,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 28.8,
+   "pump_rpm": 1482,
+   "fan_rpm": 691
+  },
+  {
+   "t": 469.7,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 28.9,
+   "pump_rpm": 1491,
+   "fan_rpm": 693
+  },
+  {
+   "t": 471.7,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 28.9,
+   "pump_rpm": 1488,
+   "fan_rpm": 691
+  },
+  {
+   "t": 473.7,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 29.0,
+   "pump_rpm": 1512,
+   "fan_rpm": 695
+  },
+  {
+   "t": 475.7,
+   "phase": "sustained",
+   "pkg": 62.0,
+   "liquid": 29.1,
+   "pump_rpm": 1554,
+   "fan_rpm": 691
+  },
+  {
+   "t": 477.7,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 29.2,
+   "pump_rpm": 1560,
+   "fan_rpm": 694
+  },
+  {
+   "t": 479.7,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 29.3,
+   "pump_rpm": 1560,
+   "fan_rpm": 689
+  },
+  {
+   "t": 481.7,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 29.4,
+   "pump_rpm": 1560,
+   "fan_rpm": 696
+  },
+  {
+   "t": 483.7,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 29.6,
+   "pump_rpm": 1560,
+   "fan_rpm": 690
+  },
+  {
+   "t": 485.7,
+   "phase": "sustained",
+   "pkg": 63.0,
+   "liquid": 29.6,
+   "pump_rpm": 1560,
+   "fan_rpm": 694
+  },
+  {
+   "t": 487.8,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 29.7,
+   "pump_rpm": 1560,
+   "fan_rpm": 688
+  },
+  {
+   "t": 489.8,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 29.8,
+   "pump_rpm": 1560,
+   "fan_rpm": 694
+  },
+  {
+   "t": 491.8,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 29.9,
+   "pump_rpm": 1560,
+   "fan_rpm": 690
+  },
+  {
+   "t": 493.8,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 30.0,
+   "pump_rpm": 1584,
+   "fan_rpm": 694
+  },
+  {
+   "t": 495.8,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 30.2,
+   "pump_rpm": 1617,
+   "fan_rpm": 689
+  },
+  {
+   "t": 497.8,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 30.3,
+   "pump_rpm": 1623,
+   "fan_rpm": 692
+  },
+  {
+   "t": 499.8,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 30.3,
+   "pump_rpm": 1626,
+   "fan_rpm": 689
+  },
+  {
+   "t": 501.8,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 30.5,
+   "pump_rpm": 1629,
+   "fan_rpm": 693
+  },
+  {
+   "t": 503.8,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 30.5,
+   "pump_rpm": 1623,
+   "fan_rpm": 689
+  },
+  {
+   "t": 505.8,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 30.6,
+   "pump_rpm": 1623,
+   "fan_rpm": 694
+  },
+  {
+   "t": 507.8,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 30.8,
+   "pump_rpm": 1623,
+   "fan_rpm": 688
+  },
+  {
+   "t": 509.9,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 30.8,
+   "pump_rpm": 1623,
+   "fan_rpm": 692
+  },
+  {
+   "t": 511.9,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 30.9,
+   "pump_rpm": 1626,
+   "fan_rpm": 686
+  },
+  {
+   "t": 513.9,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 31.0,
+   "pump_rpm": 1638,
+   "fan_rpm": 692
+  },
+  {
+   "t": 515.9,
+   "phase": "sustained",
+   "pkg": 63.0,
+   "liquid": 31.1,
+   "pump_rpm": 1662,
+   "fan_rpm": 689
+  },
+  {
+   "t": 517.9,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 31.1,
+   "pump_rpm": 1674,
+   "fan_rpm": 695
+  },
+  {
+   "t": 519.9,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 31.2,
+   "pump_rpm": 1674,
+   "fan_rpm": 688
+  },
+  {
+   "t": 521.9,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 31.3,
+   "pump_rpm": 1671,
+   "fan_rpm": 693
+  },
+  {
+   "t": 523.9,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 31.4,
+   "pump_rpm": 1671,
+   "fan_rpm": 689
+  },
+  {
+   "t": 525.9,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 31.5,
+   "pump_rpm": 1671,
+   "fan_rpm": 693
+  },
+  {
+   "t": 527.9,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 31.5,
+   "pump_rpm": 1674,
+   "fan_rpm": 689
+  },
+  {
+   "t": 530.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 31.6,
+   "pump_rpm": 1677,
+   "fan_rpm": 693
+  },
+  {
+   "t": 532.0,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 31.7,
+   "pump_rpm": 1674,
+   "fan_rpm": 689
+  },
+  {
+   "t": 534.0,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 31.8,
+   "pump_rpm": 1671,
+   "fan_rpm": 693
+  },
+  {
+   "t": 536.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 31.8,
+   "pump_rpm": 1671,
+   "fan_rpm": 688
+  },
+  {
+   "t": 538.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 31.9,
+   "pump_rpm": 1671,
+   "fan_rpm": 688
+  },
+  {
+   "t": 540.0,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.0,
+   "pump_rpm": 1677,
+   "fan_rpm": 693
+  },
+  {
+   "t": 542.0,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.0,
+   "pump_rpm": 1707,
+   "fan_rpm": 687
+  },
+  {
+   "t": 544.0,
+   "phase": "sustained",
+   "pkg": 64.0,
+   "liquid": 32.1,
+   "pump_rpm": 1734,
+   "fan_rpm": 693
+  },
+  {
+   "t": 546.0,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.2,
+   "pump_rpm": 1737,
+   "fan_rpm": 689
+  },
+  {
+   "t": 548.0,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.2,
+   "pump_rpm": 1731,
+   "fan_rpm": 692
+  },
+  {
+   "t": 550.0,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.3,
+   "pump_rpm": 1731,
+   "fan_rpm": 688
+  },
+  {
+   "t": 552.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 32.3,
+   "pump_rpm": 1734,
+   "fan_rpm": 692
+  },
+  {
+   "t": 554.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 32.4,
+   "pump_rpm": 1731,
+   "fan_rpm": 688
+  },
+  {
+   "t": 556.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 32.4,
+   "pump_rpm": 1737,
+   "fan_rpm": 692
+  },
+  {
+   "t": 558.1,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.5,
+   "pump_rpm": 1734,
+   "fan_rpm": 689
+  },
+  {
+   "t": 560.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 32.6,
+   "pump_rpm": 1737,
+   "fan_rpm": 692
+  },
+  {
+   "t": 562.1,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.6,
+   "pump_rpm": 1734,
+   "fan_rpm": 688
+  },
+  {
+   "t": 564.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 32.7,
+   "pump_rpm": 1737,
+   "fan_rpm": 692
+  },
+  {
+   "t": 566.1,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.7,
+   "pump_rpm": 1734,
+   "fan_rpm": 690
+  },
+  {
+   "t": 568.1,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 32.8,
+   "pump_rpm": 1731,
+   "fan_rpm": 693
+  },
+  {
+   "t": 570.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 32.8,
+   "pump_rpm": 1734,
+   "fan_rpm": 688
+  },
+  {
+   "t": 572.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 32.9,
+   "pump_rpm": 1737,
+   "fan_rpm": 687
+  },
+  {
+   "t": 574.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 32.9,
+   "pump_rpm": 1734,
+   "fan_rpm": 692
+  },
+  {
+   "t": 576.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.0,
+   "pump_rpm": 1761,
+   "fan_rpm": 686
+  },
+  {
+   "t": 578.2,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 33.0,
+   "pump_rpm": 1800,
+   "fan_rpm": 692
+  },
+  {
+   "t": 580.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.0,
+   "pump_rpm": 1809,
+   "fan_rpm": 688
+  },
+  {
+   "t": 582.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.0,
+   "pump_rpm": 1812,
+   "fan_rpm": 692
+  },
+  {
+   "t": 584.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.0,
+   "pump_rpm": 1809,
+   "fan_rpm": 688
+  },
+  {
+   "t": 586.2,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 33.1,
+   "pump_rpm": 1806,
+   "fan_rpm": 691
+  },
+  {
+   "t": 588.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.1,
+   "pump_rpm": 1806,
+   "fan_rpm": 688
+  },
+  {
+   "t": 590.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.1,
+   "pump_rpm": 1806,
+   "fan_rpm": 692
+  },
+  {
+   "t": 592.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.2,
+   "pump_rpm": 1803,
+   "fan_rpm": 688
+  },
+  {
+   "t": 594.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.2,
+   "pump_rpm": 1806,
+   "fan_rpm": 693
+  },
+  {
+   "t": 596.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.3,
+   "pump_rpm": 1806,
+   "fan_rpm": 688
+  },
+  {
+   "t": 598.2,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 33.3,
+   "pump_rpm": 1809,
+   "fan_rpm": 692
+  },
+  {
+   "t": 600.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.3,
+   "pump_rpm": 1809,
+   "fan_rpm": 689
+  },
+  {
+   "t": 602.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.4,
+   "pump_rpm": 1803,
+   "fan_rpm": 688
+  },
+  {
+   "t": 604.3,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 33.4,
+   "pump_rpm": 1806,
+   "fan_rpm": 692
+  },
+  {
+   "t": 606.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.5,
+   "pump_rpm": 1806,
+   "fan_rpm": 689
+  },
+  {
+   "t": 608.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.5,
+   "pump_rpm": 1806,
+   "fan_rpm": 693
+  },
+  {
+   "t": 610.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.5,
+   "pump_rpm": 1809,
+   "fan_rpm": 688
+  },
+  {
+   "t": 612.3,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 33.5,
+   "pump_rpm": 1809,
+   "fan_rpm": 687
+  },
+  {
+   "t": 614.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.6,
+   "pump_rpm": 1809,
+   "fan_rpm": 688
+  },
+  {
+   "t": 616.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.6,
+   "pump_rpm": 1806,
+   "fan_rpm": 684
+  },
+  {
+   "t": 618.3,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 33.6,
+   "pump_rpm": 1803,
+   "fan_rpm": 688
+  },
+  {
+   "t": 620.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.7,
+   "pump_rpm": 1806,
+   "fan_rpm": 691
+  },
+  {
+   "t": 622.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.7,
+   "pump_rpm": 1809,
+   "fan_rpm": 688
+  },
+  {
+   "t": 624.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.8,
+   "pump_rpm": 1809,
+   "fan_rpm": 693
+  },
+  {
+   "t": 626.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.8,
+   "pump_rpm": 1803,
+   "fan_rpm": 688
+  },
+  {
+   "t": 628.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.8,
+   "pump_rpm": 1803,
+   "fan_rpm": 692
+  },
+  {
+   "t": 630.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.8,
+   "pump_rpm": 1806,
+   "fan_rpm": 689
+  },
+  {
+   "t": 632.4,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 33.9,
+   "pump_rpm": 1809,
+   "fan_rpm": 688
+  },
+  {
+   "t": 634.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 33.9,
+   "pump_rpm": 1806,
+   "fan_rpm": 692
+  },
+  {
+   "t": 636.4,
+   "phase": "sustained",
+   "pkg": 68.0,
+   "liquid": 33.9,
+   "pump_rpm": 1803,
+   "fan_rpm": 689
+  },
+  {
+   "t": 638.4,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 33.9,
+   "pump_rpm": 1806,
+   "fan_rpm": 691
+  },
+  {
+   "t": 640.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.0,
+   "pump_rpm": 1821,
+   "fan_rpm": 726
+  },
+  {
+   "t": 642.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.0,
+   "pump_rpm": 1869,
+   "fan_rpm": 722
+  },
+  {
+   "t": 644.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.0,
+   "pump_rpm": 1881,
+   "fan_rpm": 733
+  },
+  {
+   "t": 646.5,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.0,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 648.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.0,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 650.5,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.0,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 652.5,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.1,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 654.5,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.0,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 656.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.1,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 658.5,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.1,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 660.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.1,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 662.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.1,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 664.5,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.1,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 666.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.1,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 668.6,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 670.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 672.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 674.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 676.6,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1884,
+   "fan_rpm": 734
+  },
+  {
+   "t": 678.6,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 739
+  },
+  {
+   "t": 680.6,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 682.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 684.6,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1887,
+   "fan_rpm": 730
+  },
+  {
+   "t": 686.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1884,
+   "fan_rpm": 732
+  },
+  {
+   "t": 688.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 690.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 692.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 734
+  },
+  {
+   "t": 694.7,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 696.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1884,
+   "fan_rpm": 738
+  },
+  {
+   "t": 698.7,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 700.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 735
+  },
+  {
+   "t": 702.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 704.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 734
+  },
+  {
+   "t": 706.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 708.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 710.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 734
+  },
+  {
+   "t": 712.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 714.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 716.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1887,
+   "fan_rpm": 736
+  },
+  {
+   "t": 718.8,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1884,
+   "fan_rpm": 738
+  },
+  {
+   "t": 720.8,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 722.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 724.8,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 726.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1887,
+   "fan_rpm": 736
+  },
+  {
+   "t": 728.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1887,
+   "fan_rpm": 738
+  },
+  {
+   "t": 730.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 732.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 734.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 736.9,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 738.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 740.9,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1884,
+   "fan_rpm": 733
+  },
+  {
+   "t": 742.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 744.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 746.9,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 735
+  },
+  {
+   "t": 749.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1884,
+   "fan_rpm": 735
+  },
+  {
+   "t": 751.0,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.2,
+   "pump_rpm": 1887,
+   "fan_rpm": 738
+  },
+  {
+   "t": 753.0,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 755.0,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 757.0,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 759.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.2,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 761.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 729
+  },
+  {
+   "t": 763.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1884,
+   "fan_rpm": 732
+  },
+  {
+   "t": 765.0,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 767.0,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 769.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1884,
+   "fan_rpm": 734
+  },
+  {
+   "t": 771.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1884,
+   "fan_rpm": 732
+  },
+  {
+   "t": 773.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 775.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 777.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 779.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 781.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 783.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 785.1,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 787.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 789.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 791.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 793.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 795.2,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 797.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 799.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 801.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 803.2,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 805.2,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 807.2,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 729
+  },
+  {
+   "t": 809.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 729
+  },
+  {
+   "t": 811.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1887,
+   "fan_rpm": 731
+  },
+  {
+   "t": 813.2,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1887,
+   "fan_rpm": 731
+  },
+  {
+   "t": 815.2,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 817.3,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 819.3,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 821.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 823.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1884,
+   "fan_rpm": 737
+  },
+  {
+   "t": 825.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1887,
+   "fan_rpm": 738
+  },
+  {
+   "t": 827.3,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 829.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 831.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 833.3,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 835.3,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1887,
+   "fan_rpm": 738
+  },
+  {
+   "t": 837.4,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 839.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 841.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 843.4,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 845.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 729
+  },
+  {
+   "t": 847.4,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 849.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 851.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1887,
+   "fan_rpm": 730
+  },
+  {
+   "t": 853.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1887,
+   "fan_rpm": 736
+  },
+  {
+   "t": 855.4,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.3,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 857.4,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 859.5,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 861.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 863.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 865.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1893,
+   "fan_rpm": 737
+  },
+  {
+   "t": 867.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1887,
+   "fan_rpm": 732
+  },
+  {
+   "t": 869.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 871.5,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 873.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 875.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 877.5,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 879.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 881.5,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1887,
+   "fan_rpm": 736
+  },
+  {
+   "t": 883.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 735
+  },
+  {
+   "t": 885.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 887.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 729
+  },
+  {
+   "t": 889.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 891.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1884,
+   "fan_rpm": 732
+  },
+  {
+   "t": 893.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1884,
+   "fan_rpm": 737
+  },
+  {
+   "t": 895.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 897.6,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 899.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 901.6,
+   "phase": "sustained",
+   "pkg": 65.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 903.6,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 905.6,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 735
+  },
+  {
+   "t": 907.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 909.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 911.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 913.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 915.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 734
+  },
+  {
+   "t": 917.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 919.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 921.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 730
+  },
+  {
+   "t": 923.7,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1884,
+   "fan_rpm": 737
+  },
+  {
+   "t": 925.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 927.8,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 929.8,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 931.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 933.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 935.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 937.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 732
+  },
+  {
+   "t": 939.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 941.8,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.4,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 943.8,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 736
+  },
+  {
+   "t": 945.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 735
+  },
+  {
+   "t": 947.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 733
+  },
+  {
+   "t": 949.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 736
+  },
+  {
+   "t": 951.9,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 732
+  },
+  {
+   "t": 953.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 735
+  },
+  {
+   "t": 955.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 957.9,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 732
+  },
+  {
+   "t": 959.9,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.4,
+   "pump_rpm": 1884,
+   "fan_rpm": 731
+  },
+  {
+   "t": 961.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 730
+  },
+  {
+   "t": 963.9,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 735
+  },
+  {
+   "t": 965.9,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 738
+  },
+  {
+   "t": 968.0,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 731
+  },
+  {
+   "t": 970.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 731
+  },
+  {
+   "t": 972.0,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 734
+  },
+  {
+   "t": 974.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 737
+  },
+  {
+   "t": 976.0,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 736
+  },
+  {
+   "t": 978.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 734
+  },
+  {
+   "t": 980.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 982.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1884,
+   "fan_rpm": 729
+  },
+  {
+   "t": 984.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 736
+  },
+  {
+   "t": 986.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 988.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 735
+  },
+  {
+   "t": 990.0,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1893,
+   "fan_rpm": 734
+  },
+  {
+   "t": 992.1,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1887,
+   "fan_rpm": 729
+  },
+  {
+   "t": 994.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.6,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 996.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 998.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 1000.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 732
+  },
+  {
+   "t": 1002.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 1004.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 734
+  },
+  {
+   "t": 1006.1,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 737
+  },
+  {
+   "t": 1008.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 1010.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 731
+  },
+  {
+   "t": 1012.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 730
+  },
+  {
+   "t": 1014.1,
+   "phase": "sustained",
+   "pkg": 66.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 733
+  },
+  {
+   "t": 1016.2,
+   "phase": "sustained",
+   "pkg": 67.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 736
+  },
+  {
+   "t": 1018.2,
+   "phase": "recovery",
+   "pkg": 44.0,
+   "liquid": 34.5,
+   "pump_rpm": 1890,
+   "fan_rpm": 738
+  },
+  {
+   "t": 1020.2,
+   "phase": "recovery",
+   "pkg": 39.0,
+   "liquid": 34.5,
+   "pump_rpm": 1899,
+   "fan_rpm": 739
+  },
+  {
+   "t": 1022.2,
+   "phase": "recovery",
+   "pkg": 38.0,
+   "liquid": 34.5,
+   "pump_rpm": 1905,
+   "fan_rpm": 739
+  },
+  {
+   "t": 1024.2,
+   "phase": "recovery",
+   "pkg": 38.0,
+   "liquid": 34.4,
+   "pump_rpm": 1911,
+   "fan_rpm": 743
+  },
+  {
+   "t": 1026.2,
+   "phase": "recovery",
+   "pkg": 38.0,
+   "liquid": 34.2,
+   "pump_rpm": 1911,
+   "fan_rpm": 741
+  },
+  {
+   "t": 1028.3,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 34.1,
+   "pump_rpm": 1914,
+   "fan_rpm": 742
+  },
+  {
+   "t": 1030.3,
+   "phase": "recovery",
+   "pkg": 38.0,
+   "liquid": 34.9,
+   "pump_rpm": 1914,
+   "fan_rpm": 746
+  },
+  {
+   "t": 1032.3,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 33.8,
+   "pump_rpm": 1884,
+   "fan_rpm": 705
+  },
+  {
+   "t": 1034.3,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 33.7,
+   "pump_rpm": 1824,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1036.3,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 33.6,
+   "pump_rpm": 1824,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1038.3,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 33.5,
+   "pump_rpm": 1824,
+   "fan_rpm": 697
+  },
+  {
+   "t": 1040.4,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 33.3,
+   "pump_rpm": 1824,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1042.4,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 33.2,
+   "pump_rpm": 1827,
+   "fan_rpm": 698
+  },
+  {
+   "t": 1044.4,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 33.1,
+   "pump_rpm": 1824,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1046.4,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 33.0,
+   "pump_rpm": 1824,
+   "fan_rpm": 697
+  },
+  {
+   "t": 1048.4,
+   "phase": "recovery",
+   "pkg": 36.0,
+   "liquid": 32.9,
+   "pump_rpm": 1824,
+   "fan_rpm": 694
+  },
+  {
+   "t": 1050.5,
+   "phase": "recovery",
+   "pkg": 37.0,
+   "liquid": 32.8,
+   "pump_rpm": 1788,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1052.5,
+   "phase": "recovery",
+   "pkg": 35.0,
+   "liquid": 32.7,
+   "pump_rpm": 1743,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1054.5,
+   "phase": "recovery",
+   "pkg": 35.0,
+   "liquid": 32.5,
+   "pump_rpm": 1743,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1056.5,
+   "phase": "recovery",
+   "pkg": 35.0,
+   "liquid": 32.4,
+   "pump_rpm": 1743,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1058.5,
+   "phase": "recovery",
+   "pkg": 35.0,
+   "liquid": 32.2,
+   "pump_rpm": 1746,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1060.5,
+   "phase": "recovery",
+   "pkg": 35.0,
+   "liquid": 32.1,
+   "pump_rpm": 1746,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1062.6,
+   "phase": "recovery",
+   "pkg": 34.0,
+   "liquid": 31.9,
+   "pump_rpm": 1740,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1064.6,
+   "phase": "recovery",
+   "pkg": 34.0,
+   "liquid": 31.7,
+   "pump_rpm": 1719,
+   "fan_rpm": 698
+  },
+  {
+   "t": 1066.6,
+   "phase": "recovery",
+   "pkg": 34.0,
+   "liquid": 31.5,
+   "pump_rpm": 1683,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1068.6,
+   "phase": "recovery",
+   "pkg": 34.0,
+   "liquid": 31.4,
+   "pump_rpm": 1680,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1070.7,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 31.2,
+   "pump_rpm": 1680,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1072.7,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 31.1,
+   "pump_rpm": 1680,
+   "fan_rpm": 697
+  },
+  {
+   "t": 1074.7,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 30.9,
+   "pump_rpm": 1680,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1076.7,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 30.7,
+   "pump_rpm": 1653,
+   "fan_rpm": 695
+  },
+  {
+   "t": 1078.7,
+   "phase": "recovery",
+   "pkg": 34.0,
+   "liquid": 30.6,
+   "pump_rpm": 1638,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1080.8,
+   "phase": "recovery",
+   "pkg": 34.0,
+   "liquid": 30.5,
+   "pump_rpm": 1632,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1082.8,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 30.3,
+   "pump_rpm": 1632,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1084.8,
+   "phase": "recovery",
+   "pkg": 34.0,
+   "liquid": 30.2,
+   "pump_rpm": 1626,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1086.8,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 30.0,
+   "pump_rpm": 1632,
+   "fan_rpm": 695
+  },
+  {
+   "t": 1088.8,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 29.9,
+   "pump_rpm": 1626,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1090.9,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 29.8,
+   "pump_rpm": 1587,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1092.9,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 29.6,
+   "pump_rpm": 1569,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1094.9,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 29.5,
+   "pump_rpm": 1569,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1096.9,
+   "phase": "recovery",
+   "pkg": 32.0,
+   "liquid": 29.4,
+   "pump_rpm": 1566,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1099.0,
+   "phase": "recovery",
+   "pkg": 32.0,
+   "liquid": 29.3,
+   "pump_rpm": 1566,
+   "fan_rpm": 698
+  },
+  {
+   "t": 1101.0,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 29.2,
+   "pump_rpm": 1569,
+   "fan_rpm": 691
+  },
+  {
+   "t": 1103.0,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 29.1,
+   "pump_rpm": 1569,
+   "fan_rpm": 699
+  },
+  {
+   "t": 1105.0,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 28.9,
+   "pump_rpm": 1566,
+   "fan_rpm": 694
+  },
+  {
+   "t": 1107.0,
+   "phase": "recovery",
+   "pkg": 32.0,
+   "liquid": 28.8,
+   "pump_rpm": 1539,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1109.1,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 28.7,
+   "pump_rpm": 1509,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1111.1,
+   "phase": "recovery",
+   "pkg": 33.0,
+   "liquid": 28.6,
+   "pump_rpm": 1506,
+   "fan_rpm": 695
+  },
+  {
+   "t": 1113.1,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 28.5,
+   "pump_rpm": 1506,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1115.1,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 28.4,
+   "pump_rpm": 1506,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1117.1,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 28.3,
+   "pump_rpm": 1506,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1119.2,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 28.2,
+   "pump_rpm": 1506,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1121.2,
+   "phase": "recovery",
+   "pkg": 32.0,
+   "liquid": 28.1,
+   "pump_rpm": 1506,
+   "fan_rpm": 697
+  },
+  {
+   "t": 1123.2,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 28.0,
+   "pump_rpm": 1506,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1125.2,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 27.9,
+   "pump_rpm": 1506,
+   "fan_rpm": 697
+  },
+  {
+   "t": 1127.2,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 27.8,
+   "pump_rpm": 1479,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1129.2,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 27.8,
+   "pump_rpm": 1446,
+   "fan_rpm": 694
+  },
+  {
+   "t": 1131.3,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 27.7,
+   "pump_rpm": 1446,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1133.3,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 27.6,
+   "pump_rpm": 1446,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1135.3,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 27.5,
+   "pump_rpm": 1443,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1137.3,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 27.4,
+   "pump_rpm": 1449,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1139.4,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 27.3,
+   "pump_rpm": 1449,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1141.4,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 27.3,
+   "pump_rpm": 1452,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1143.4,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 27.2,
+   "pump_rpm": 1449,
+   "fan_rpm": 698
+  },
+  {
+   "t": 1145.4,
+   "phase": "recovery",
+   "pkg": 32.0,
+   "liquid": 27.1,
+   "pump_rpm": 1449,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1147.4,
+   "phase": "recovery",
+   "pkg": 31.0,
+   "liquid": 27.1,
+   "pump_rpm": 1449,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1149.5,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 27.0,
+   "pump_rpm": 1446,
+   "fan_rpm": 694
+  },
+  {
+   "t": 1151.5,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 26.9,
+   "pump_rpm": 1428,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1153.5,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 26.8,
+   "pump_rpm": 1398,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1155.5,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 26.8,
+   "pump_rpm": 1386,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1157.5,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 26.7,
+   "pump_rpm": 1383,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1159.6,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 26.7,
+   "pump_rpm": 1383,
+   "fan_rpm": 692
+  },
+  {
+   "t": 1161.6,
+   "phase": "recovery",
+   "pkg": 32.0,
+   "liquid": 26.6,
+   "pump_rpm": 1380,
+   "fan_rpm": 693
+  },
+  {
+   "t": 1163.6,
+   "phase": "recovery",
+   "pkg": 32.0,
+   "liquid": 26.5,
+   "pump_rpm": 1380,
+   "fan_rpm": 697
+  },
+  {
+   "t": 1165.6,
+   "phase": "recovery",
+   "pkg": 30.0,
+   "liquid": 26.4,
+   "pump_rpm": 1380,
+   "fan_rpm": 696
+  },
+  {
+   "t": 1167.7,
+   "phase": "recovery",
+   "pkg": 32.0,
+   "liquid": 26.4,
+   "pump_rpm": 1386,
+   "fan_rpm": 692
+  }
+ ]
+}

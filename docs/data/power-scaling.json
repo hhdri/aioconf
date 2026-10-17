@@ -1,0 +1,111 @@
+{
+ "meta": {
+  "cpu": "Intel Core i9-14900K (8P+16E, Hyper-Threading off)",
+  "cooler": "NZXT Kraken 2023, 3-fan radiator, top exhaust",
+  "case": "NZXT H6 Flow, 3 front intake fans",
+  "room_c": 22,
+  "load": "stress-ng --cpu 24 --cpu-method matrixprod"
+ },
+ "note": "PL1 = PL2 = limit_w, set through intel-rapl sysfs. Cooler at 100% for every run. limit_w 4095 means no limit.",
+ "runs": [
+  {
+   "limit_w": 100,
+   "watts": 99.9,
+   "ops_s": 43909.24,
+   "p_mhz": 3601,
+   "e_mhz": 3105,
+   "pkg_mean": 40.9,
+   "pkg_max": 42.0,
+   "throttle_pct": 0.0,
+   "liquid": 24.7
+  },
+  {
+   "limit_w": 125,
+   "watts": 125.0,
+   "ops_s": 48681.71,
+   "p_mhz": 4072,
+   "e_mhz": 3400,
+   "pkg_mean": 45.0,
+   "pkg_max": 46.0,
+   "throttle_pct": 0.0,
+   "liquid": 24.7
+  },
+  {
+   "limit_w": 150,
+   "watts": 150.0,
+   "ops_s": 52696.78,
+   "p_mhz": 4380,
+   "e_mhz": 3653,
+   "pkg_mean": 49.7,
+   "pkg_max": 51.0,
+   "throttle_pct": 0.0,
+   "liquid": 25.8
+  },
+  {
+   "limit_w": 180,
+   "watts": 180.0,
+   "ops_s": 55658.88,
+   "p_mhz": 4612,
+   "e_mhz": 3880,
+   "pkg_mean": 55.9,
+   "pkg_max": 57.0,
+   "throttle_pct": 0.0,
+   "liquid": 26.3
+  },
+  {
+   "limit_w": 200,
+   "watts": 200.0,
+   "ops_s": 57282.36,
+   "p_mhz": 4815,
+   "e_mhz": 3937,
+   "pkg_mean": 60.5,
+   "pkg_max": 62.0,
+   "throttle_pct": 0.0,
+   "liquid": 27.1
+  },
+  {
+   "limit_w": 225,
+   "watts": 224.9,
+   "ops_s": 58626.34,
+   "p_mhz": 5000,
+   "e_mhz": 4008,
+   "pkg_mean": 65.9,
+   "pkg_max": 67.0,
+   "throttle_pct": 0.0,
+   "liquid": 27.8
+  },
+  {
+   "limit_w": 253,
+   "watts": 253.0,
+   "ops_s": 60589.82,
+   "p_mhz": 5193,
+   "e_mhz": 4101,
+   "pkg_mean": 71.8,
+   "pkg_max": 73.0,
+   "throttle_pct": 0.0,
+   "liquid": 28.3
+  },
+  {
+   "limit_w": 300,
+   "watts": 300.0,
+   "ops_s": 62825.34,
+   "p_mhz": 5333,
+   "e_mhz": 4267,
+   "pkg_mean": 82.5,
+   "pkg_max": 83.0,
+   "throttle_pct": 0.0,
+   "liquid": 29.6
+  },
+  {
+   "limit_w": 4095,
+   "watts": 309.7,
+   "ops_s": 63075.86,
+   "p_mhz": 5381,
+   "e_mhz": 4283,
+   "pkg_mean": 84.6,
+   "pkg_max": 86.0,
+   "throttle_pct": 0.0,
+   "liquid": 30.1
+  }
+ ]
+}
