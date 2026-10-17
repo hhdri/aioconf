@@ -263,6 +263,20 @@ The same single-thread runs without any limit averaged 5857 MHz on a 6.0 GHz
 core, 5700 MHz on a 5.7 GHz core and 4400 MHz on an E-core. Up to four busy
 P-cores run at full turbo under 180 W.
 
+### Hyper-Threading
+
+All the runs above had Hyper-Threading off. Turned on afterwards, at the same
+180 W limit:
+
+| Load | 24 threads | 32 threads, using Hyper-Threading | Difference |
+|---|---|---|---|
+| `stress-ng --cpu-method int64` | 78,432 ops/s | 88,082 ops/s | +12.3% |
+| `stress-ng --cpu-method matrixprod` | 55,438 ops/s | 53,051 ops/s | -4.3% |
+
+Integer work gains, while heavy floating-point math loses a little when it
+runs one thread per logical CPU, because two threads share one core's
+floating-point units. With 24 busy threads it made no difference.
+
 ### Validation
 
 ![Validation run at 180 W](docs/validation.svg)
