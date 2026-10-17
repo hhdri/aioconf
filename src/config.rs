@@ -127,12 +127,24 @@ impl fmt::Display for BoardFan {
     }
 }
 
+/// NVIDIA clock offsets, `gpu.mem_offset = 3000` and `gpu.gr_offset = 100`, in
+/// NVML's units. aioconf only validates them; `aioconf-nvidia` applies them
+/// through NVML, since a freestanding binary cannot load NVIDIA's library.
+/// On the cards tested the offset is shared by every power state, so there is
+/// one value per clock.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub struct Gpu {
+    pub mem_offset: Option<i16>,
+    pub gr_offset: Option<i16>,
+}
+
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
 pub struct Config {
     pub pump: Option<Setting>,
     pub fan: Option<Setting>,
     /// `board[0]` is header `pwm1`.
     pub board: [Option<BoardFan>; BOARD_HEADERS],
+    pub gpu: Gpu,
 }
 
 impl Config {
@@ -142,6 +154,10 @@ impl Config {
 
     pub fn has_board(&self) -> bool {
         self.board.iter().any(Option::is_some)
+    }
+
+    pub fn has_gpu(&self) -> bool {
+        self.gpu.mem_offset.is_some() || self.gpu.gr_offset.is_some()
     }
 }
 
@@ -167,6 +183,8 @@ pub enum ErrorKind {
     BadHeader,
     BadSource,
     BoardCurve,
+    BadGpuKey,
+    GpuOffsetRange,
 }
 
 impl fmt::Display for ErrorKind {
@@ -183,6 +201,8 @@ impl fmt::Display for ErrorKind {
             ErrorKind::BadHeader => "board headers are board.pwm1 to board.pwm7",
             ErrorKind::BadSource => "a sensor name is letters, digits and _, at most 32 characters",
             ErrorKind::BoardCurve => "a board curve is 1 to 4 pairs of temperature and duty",
+            ErrorKind::BadGpuKey => "GPU keys are gpu.mem_offset and gpu.gr_offset",
+            ErrorKind::GpuOffsetRange => "a GPU offset is a whole number of MHz from -2000 to 6000",
         })
     }
 }
@@ -204,6 +224,15 @@ pub fn parse(text: &str) -> Result<Config, Error> {
         }
         let (key, value) = line.split_once('=').ok_or(err(ErrorKind::MissingEquals))?;
         let key = key.trim();
+        if let Some(kind) = key.strip_prefix("gpu.") {
+            let mhz = parse_i16(value.trim()).filter(|v| (-2000..=6000).contains(v)).ok_or(err(ErrorKind::GpuOffsetRange))?;
+            match kind {
+                "mem_offset" => cfg.gpu.mem_offset = Some(mhz),
+                "gr_offset" => cfg.gpu.gr_offset = Some(mhz),
+                _ => return Err(err(ErrorKind::BadGpuKey)),
+            }
+            continue;
+        }
         if let Some(header) = key.strip_prefix("board.pwm") {
             let n = parse_u8(header).filter(|n| (1..=BOARD_HEADERS as u8).contains(n)).ok_or(err(ErrorKind::BadHeader))?;
             cfg.board[n as usize - 1] = Some(parse_board(value).map_err(err)?);
@@ -285,6 +314,18 @@ fn duty(d: u8) -> Result<u8, ErrorKind> {
     if d <= 100 { Ok(d) } else { Err(ErrorKind::DutyOutOfRange) }
 }
 
+fn parse_i16(s: &str) -> Option<i16> {
+    let (neg, digits) = match s.strip_prefix('-') {
+        Some(d) => (true, d),
+        None => (false, s.strip_prefix('+').unwrap_or(s)),
+    };
+    if digits.is_empty() || digits.len() > 5 || !digits.bytes().all(|b| b.is_ascii_digit()) {
+        return None;
+    }
+    let v = digits.bytes().fold(0i32, |a, b| a * 10 + (b - b'0') as i32);
+    i16::try_from(if neg { -v } else { v }).ok()
+}
+
 fn parse_u8(s: &str) -> Option<u8> {
     if s.is_empty() || s.len() > 3 || !s.bytes().all(|b| b.is_ascii_digit()) {
         return None;
@@ -362,6 +403,17 @@ mod tests {
         assert_eq!(parse("board.pwm1 = SYS-TIN 30 40").unwrap_err().kind, ErrorKind::BadSource);
         // Ramp times are deliberately not configurable; see src/board.rs.
         assert_eq!(parse("board.pwm1.ramp = 100 300").unwrap_err().kind, ErrorKind::BadHeader);
+    }
+
+    #[test]
+    fn gpu_offsets() {
+        let cfg = parse("gpu.mem_offset = 3000\ngpu.gr_offset = -100\ngpu.mem_offset = +2500\n").unwrap();
+        assert_eq!(cfg.gpu, Gpu { mem_offset: Some(2500), gr_offset: Some(-100) });
+        assert!(cfg.has_gpu() && !cfg.has_kraken() && !cfg.has_board());
+        assert_eq!(parse("gpu.mem_offset.p2 = 100").unwrap_err().kind, ErrorKind::BadGpuKey);
+        assert_eq!(parse("gpu.core_offset = 100").unwrap_err().kind, ErrorKind::BadGpuKey);
+        assert_eq!(parse("gpu.mem_offset = 7000").unwrap_err().kind, ErrorKind::GpuOffsetRange);
+        assert_eq!(parse("gpu.mem_offset = fast").unwrap_err().kind, ErrorKind::GpuOffsetRange);
     }
 
     #[test]

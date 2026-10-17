@@ -1,5 +1,5 @@
 [Unit]
-Description=Apply NZXT Kraken and motherboard fan curves
+Description=Apply NZXT Kraken, motherboard fan and NVIDIA clock settings
 Documentation=https://github.com/hhdri/aioconf
 # The motherboard fan driver must be loaded before board.pwm* curves can be written.
 After=systemd-modules-load.service
@@ -11,26 +11,32 @@ StartLimitBurst=10
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/aioconf apply /etc/aioconf.conf
+# gpu.* lines, through NVIDIA's NVML. Does nothing when the config has none.
+ExecStart=/usr/local/bin/aioconf-nvidia apply /etc/aioconf.conf
 # The device node can appear a moment before it accepts reports.
 Restart=on-failure
 RestartSec=2
 
-# aioconf reads its config, writes fan curve files in /sys, and talks to one hidraw node.
+# The tools read the config, write fan curve files in /sys, and talk to one
+# hidraw node and the NVIDIA control devices.
 DevicePolicy=closed
 DeviceAllow=char-hidraw rw
+DeviceAllow=char-nvidia rw
+DeviceAllow=char-nvidia-caps r
 NoNewPrivileges=yes
 ProtectSystem=strict
 ProtectHome=yes
 PrivateTmp=yes
 PrivateNetwork=yes
-RestrictAddressFamilies=none
-CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX
+# NVML refuses clock changes without CAP_SYS_ADMIN; aioconf itself needs none.
+CapabilityBoundingSet=CAP_SYS_ADMIN
 LockPersonality=yes
 MemoryDenyWriteExecute=yes
 RestrictRealtime=yes
 RestrictNamespaces=yes
 SystemCallArchitectures=native
-SystemCallFilter=@basic-io @file-system @io-event ioctl exit_group
+SystemCallFilter=@system-service
 
 [Install]
 WantedBy=multi-user.target suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target

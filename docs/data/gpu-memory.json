@@ -1,0 +1,110 @@
+{
+ "meta": {
+  "cpu": "Intel Core i9-14900K (8P+16E, Hyper-Threading off)",
+  "cooler": "NZXT Kraken 2023, 3-fan radiator, top exhaust",
+  "case": "NZXT H6 Flow, 3 front intake fans",
+  "room_c": 22,
+  "load": "stress-ng --cpu 24 --cpu-method matrixprod",
+  "gpu": "NVIDIA GeForce RTX 4060 8 GB, driver 615.78, 115 W limit"
+ },
+ "note": "qwen3:8b q4_K_M, 100% on the GPU, temperature 0, seed 42, 512 tokens, thinking off. offset is NVML's memory clock offset; the reported memory clock rises by half of it. Compute runs in power state P2, 250 MHz below P0. output_correct means every answer matched the stock answer byte for byte.",
+ "steps": [
+  {
+   "offset": 0,
+   "mem_mhz": 8251,
+   "tok_s": 48.66,
+   "tok_s_sd": 0.14,
+   "runs": 8,
+   "gr_mhz": 2700,
+   "gpu_temp_max": 65.0,
+   "output_correct": true
+  },
+  {
+   "offset": 500,
+   "mem_mhz": 8501,
+   "tok_s": 49.99,
+   "tok_s_sd": 0.07,
+   "runs": 8,
+   "gr_mhz": 2670,
+   "gpu_temp_max": 66.0,
+   "output_correct": true
+  },
+  {
+   "offset": 1000,
+   "mem_mhz": 8751,
+   "tok_s": 51.34,
+   "tok_s_sd": 0.04,
+   "runs": 8,
+   "gr_mhz": 2655,
+   "gpu_temp_max": 66.0,
+   "output_correct": true
+  },
+  {
+   "offset": 1500,
+   "mem_mhz": 9001,
+   "tok_s": 52.72,
+   "tok_s_sd": 0.05,
+   "runs": 8,
+   "gr_mhz": 2640,
+   "gpu_temp_max": 67.0,
+   "output_correct": true
+  },
+  {
+   "offset": 2000,
+   "mem_mhz": 9251,
+   "tok_s": 54.1,
+   "tok_s_sd": 0.11,
+   "runs": 8,
+   "gr_mhz": 2625,
+   "gpu_temp_max": 67.0,
+   "output_correct": true
+  },
+  {
+   "offset": 2500,
+   "mem_mhz": 9501,
+   "tok_s": 55.34,
+   "tok_s_sd": 0.11,
+   "runs": 8,
+   "gr_mhz": 2625,
+   "gpu_temp_max": 67.0,
+   "output_correct": true
+  },
+  {
+   "offset": 3000,
+   "mem_mhz": 9751,
+   "tok_s": 56.67,
+   "tok_s_sd": 0.1,
+   "runs": 8,
+   "gr_mhz": 2610,
+   "gpu_temp_max": 67.0,
+   "output_correct": true
+  },
+  {
+   "offset": 3500,
+   "mem_mhz": 10001,
+   "tok_s": 57.96,
+   "tok_s_sd": 0.14,
+   "runs": 8,
+   "gr_mhz": 2565,
+   "gpu_temp_max": 68.0,
+   "output_correct": true
+  },
+  {
+   "offset": 4000,
+   "mem_mhz": 10251,
+   "tok_s": 59.29,
+   "tok_s_sd": 0.08,
+   "runs": 8,
+   "gr_mhz": 2535,
+   "gpu_temp_max": 68.0,
+   "output_correct": false
+  }
+ ],
+ "soak": {
+  "offset": 3000,
+  "mem_mhz": 9751,
+  "runs": 30,
+  "tok_s": 56.7,
+  "output_correct": true
+ }
+}

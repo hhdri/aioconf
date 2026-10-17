@@ -264,7 +264,7 @@ fn apply_file(opts: &Opts, rest: &[&str]) -> Result<(), Error> {
     let bytes = io::read_file(&path, &mut buf).map_err(|errno| Error::Sys { what: "read", path, errno })?;
     let text = core::str::from_utf8(bytes).map_err(|_| Error::Sys { what: "read", path, errno: sys::EIO })?;
     let cfg = config::parse(text).map_err(|err| Error::Config { source: path, err })?;
-    if !cfg.has_kraken() && !cfg.has_board() {
+    if !cfg.has_kraken() && !cfg.has_board() && !cfg.has_gpu() {
         return Err(Error::Config { source: path, err: config::Error { line: 0, kind: config::ErrorKind::Empty } });
     }
     apply(opts, &cfg, path.as_str())
@@ -290,6 +290,11 @@ fn apply(opts: &Opts, cfg: &Config, source: &str) -> Result<(), Error> {
     // does not leave the Kraken unconfigured, then report the first error.
     let kraken = if cfg.has_kraken() { apply_kraken(opts, cfg, source, &mut o) } else { Ok(()) };
     let board = if cfg.has_board() { board::apply(cfg, opts.dry_run, source, &mut o) } else { Ok(()) };
+    for (name, value) in [("mem_offset", cfg.gpu.mem_offset), ("gr_offset", cfg.gpu.gr_offset)] {
+        if let Some(mhz) = value {
+            let _ = writeln!(o, "gpu   {name} {mhz:+} MHz  (applied by aioconf-nvidia)");
+        }
+    }
     kraken.and(board)
 }
 

@@ -10,6 +10,7 @@ BIN := target/release/aioconf
 install:
 	@test -x $(BIN) || { echo "Run 'cargo build --release' first."; exit 1; }
 	install -Dm755 $(BIN) $(DESTDIR)$(PREFIX)/bin/aioconf
+	install -Dm755 contrib/aioconf-nvidia $(DESTDIR)$(PREFIX)/bin/aioconf-nvidia
 	install -Dm644 contrib/aioconf.service $(DESTDIR)/etc/systemd/system/aioconf.service
 	install -Dm644 contrib/60-aioconf.rules $(DESTDIR)/etc/udev/rules.d/60-aioconf.rules
 	@if [ "$(BOARD)" = 1 ]; then \
@@ -32,7 +33,7 @@ install:
 
 uninstall:
 	-systemctl disable aioconf.service
-	rm -f $(DESTDIR)$(PREFIX)/bin/aioconf $(DESTDIR)/etc/systemd/system/aioconf.service \
+	rm -f $(DESTDIR)$(PREFIX)/bin/aioconf $(DESTDIR)$(PREFIX)/bin/aioconf-nvidia $(DESTDIR)/etc/systemd/system/aioconf.service \
 		$(DESTDIR)/etc/udev/rules.d/60-aioconf.rules $(DESTDIR)/etc/modules-load.d/aioconf.conf
 	-systemctl daemon-reload
 	-udevadm control --reload

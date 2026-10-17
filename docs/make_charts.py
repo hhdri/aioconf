@@ -25,6 +25,8 @@ STYLE = """
   .s1-line { stroke: #2a78d6; fill: none; }
   .s2-line { stroke: #eb6834; fill: none; }
   .s3-line { stroke: #1baf7a; fill: none; }
+  .crit-line { stroke: #d03b3b; fill: none; }
+  .crit-dot { fill: #d03b3b; }
   .s1-dot { fill: #2a78d6; }
   .s2-dot { fill: #eb6834; }
   .ring { stroke: #fcfcfb; stroke-width: 2; }
@@ -161,6 +163,23 @@ def pump_chart():
                y_fmt=lambda v: f"{v}")
 
 
+def gpu_chart():
+    d = data("gpu-memory.json")
+    ok = [(s["mem_mhz"], s["tok_s"]) for s in d["steps"] if s["output_correct"]]
+    bad = [(s["mem_mhz"], s["tok_s"]) for s in d["steps"] if not s["output_correct"]]
+    stock = d["steps"][0]["tok_s"]
+    labels = [(0, 0, f"Stock {ok[0][1]:.1f}", 0, 22)]
+    i3000 = next(i for i, p in enumerate(sorted(ok)) if p[0] == 9751)
+    labels.append((0, i3000, f"+3000: {ok[i3000][1]:.1f} (+{(ok[i3000][1] / stock - 1) * 100:.1f}%)", 30, 28))
+    labels.append((1, 0, "Wrong answers", -6, -16))
+    line_chart("gpu-memory.svg", "RTX 4060: memory clock vs Ollama generation speed",
+               "qwen3:8b fully on the GPU, 8 runs per step. Every answer checked against the stock answer.",
+               "Memory clock in compute mode (MHz)", "Tokens per second", (8100, 10400), (44, 62),
+               [8250, 8750, 9250, 9750, 10250], [44, 48, 52, 56, 60],
+               [{"name": "Correct output", "cls": "s1", "points": ok}, {"name": "Corrupted output", "cls": "crit", "points": bad}],
+               labels=labels, end_labels=False)
+
+
 def curve_chart():
     d = data("curves.json")
     temps = list(range(20, 60))
@@ -244,3 +263,5 @@ if __name__ == "__main__":
         curve_chart()
     if os.path.exists(os.path.join(HERE, "data", "validation-180w.json")):
         timeline_chart()
+    if os.path.exists(os.path.join(HERE, "data", "gpu-memory.json")):
+        gpu_chart()

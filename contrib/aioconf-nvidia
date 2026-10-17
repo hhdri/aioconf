@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""aioconf-nvidia: apply the gpu.* lines of an aioconf config through NVIDIA's NVML.
+
+The freestanding aioconf binary cannot load libnvidia-ml, so this small helper
+does the GPU part. Standard library only.
+
+  aioconf-nvidia apply [FILE] [--dry-run]   apply gpu.* offsets (default /etc/aioconf.conf)
+  aioconf-nvidia status                     show current offsets, allowed ranges and clocks
+
+Config lines:
+  gpu.mem_offset = MHZ    memory clock offset
+  gpu.gr_offset  = MHZ    graphics clock offset
+
+Offsets use NVML's units. For the memory clock, the clock nvidia-smi reports
+rises by half the offset. On the RTX 4060 tested, an offset is shared by every
+power state: setting it for one state sets it for all, so there is one value
+per clock. Compute work (CUDA, Ollama) runs in P2, whose memory clock is 250
+MHz below P0's, the state games use.
+"""
+import ctypes
+import re
+import sys
+import time
+
+DEFAULT_CONFIG = "/etc/aioconf.conf"
+KINDS = {"mem_offset": 2, "gr_offset": 0}  # NVML_CLOCK_MEM, NVML_CLOCK_GRAPHICS
+LINE = re.compile(r"^\s*gpu\.(mem_offset|gr_offset)\s*=\s*([+-]?\d+)\s*(?:#.*)?$")
+
+
+class ClockOffset(ctypes.Structure):
+    _fields_ = [("version", ctypes.c_uint), ("type", ctypes.c_int), ("pstate", ctypes.c_int),
+                ("clockOffsetMHz", ctypes.c_int), ("minClockOffsetMHz", ctypes.c_int),
+                ("maxClockOffsetMHz", ctypes.c_int)]
+
+
+VERSION = ctypes.sizeof(ClockOffset) | (1 << 24)
+
+
+def die(msg, code=1):
+    print(f"aioconf-nvidia: {msg}", file=sys.stderr)
+    sys.exit(code)
+
+
+def parse(path):
+    try:
+        text = open(path).read()
+    except OSError as e:
+        die(f"cannot read {path}: {e.strerror}")
+    offsets = {}
+    for n, raw in enumerate(text.splitlines(), 1):
+        line = raw.split("#")[0].strip()
+        if not line.startswith("gpu."):
+            continue
+        m = LINE.match(raw)
+        if not m:
+            die(f"{path}, line {n}: expected gpu.mem_offset = MHZ or gpu.gr_offset = MHZ")
+        mhz = int(m.group(2))
+        if not -2000 <= mhz <= 6000:
+            die(f"{path}, line {n}: offset must be from -2000 to 6000")
+        offsets[m.group(1)] = mhz
+    return offsets
+
+
+class Nvml:
+    def __init__(self, wait_s=30):
+        try:
+            self.lib = ctypes.CDLL("libnvidia-ml.so.1")
+        except OSError:
+            die("libnvidia-ml.so.1 not found; is the NVIDIA driver installed?")
+        self.lib.nvmlErrorString.restype = ctypes.c_char_p
+        deadline = time.monotonic() + wait_s
+        while True:
+            rc = self.lib.nvmlInit_v2()
+            if rc == 0:
+                break
+            if time.monotonic() > deadline:
+                die(f"NVML init failed: {self.err(rc)}")
+            time.sleep(1)
+        self.dev = ctypes.c_void_p()
+        self.check(self.lib.nvmlDeviceGetHandleByIndex_v2(0, ctypes.byref(self.dev)), "open GPU 0")
+
+    def err(self, rc):
+        return f"{self.lib.nvmlErrorString(rc).decode()} ({rc})"
+
+    def check(self, rc, what):
+        if rc != 0:
+            die(f"{what}: {self.err(rc)}")
+
+    def get(self, kind, pstate):
+        o = ClockOffset(version=VERSION, type=KINDS[kind], pstate=pstate)
+        self.check(self.lib.nvmlDeviceGetClockOffsets(self.dev, ctypes.byref(o)), f"read {kind} P{pstate}")
+        return o
+
+    def set(self, kind, pstate, mhz):
+        o = ClockOffset(version=VERSION, type=KINDS[kind], pstate=pstate, clockOffsetMHz=mhz)
+        self.check(self.lib.nvmlDeviceSetClockOffsets(self.dev, ctypes.byref(o)), f"set {kind} P{pstate} to {mhz:+d}")
+
+    def name(self):
+        buf = ctypes.create_string_buffer(96)
+        self.lib.nvmlDeviceGetName(self.dev, buf, 96)
+        return buf.value.decode()
+
+
+def apply(path, dry_run):
+    offsets = parse(path)
+    if not offsets:
+        return
+    if dry_run:
+        for kind, mhz in sorted(offsets.items()):
+            print(f"would set {kind} to {mhz:+d} MHz")
+        return
+    nv = Nvml()
+    for kind, mhz in sorted(offsets.items()):
+        # Written for P0, then checked in both P0 and P2: the driver shares
+        # one offset between power states, and this confirms it did.
+        nv.set(kind, 0, mhz)
+        for p in (0, 2):
+            got = nv.get(kind, p).clockOffsetMHz
+            if got != mhz:
+                nv.set(kind, p, mhz)
+                got = nv.get(kind, p).clockOffsetMHz
+            if got != mhz:
+                die(f"{kind} P{p} reads back {got:+d}, not {mhz:+d}")
+        print(f"gpu   {kind} {mhz:+d} MHz  ({path})")
+    print(f"Applied to {nv.name()}")
+
+
+def status():
+    nv = Nvml(wait_s=0)
+    print(nv.name())
+    for kind in KINDS:
+        for p in (0, 2):
+            o = nv.get(kind, p)
+            print(f"  {kind:<10} P{p}  {o.clockOffsetMHz:+5d} MHz  (allowed {o.minClockOffsetMHz:+d} to {o.maxClockOffsetMHz:+d})")
+
+
+def main(argv):
+    args = [a for a in argv if a != "--dry-run"]
+    if not args or args[0] in ("-h", "--help"):
+        print(__doc__.strip())
+        return
+    if args[0] == "apply":
+        apply(args[1] if len(args) > 1 else DEFAULT_CONFIG, "--dry-run" in argv)
+    elif args[0] == "status":
+        status()
+    else:
+        die("unknown command; try --help", 2)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

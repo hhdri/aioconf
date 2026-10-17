@@ -32,3 +32,12 @@ sudo python3 -I tools/loadtest/validate.py /etc/aioconf.conf 180 out/
 The CPU core numbers in `turbo.py` and `threads.py` match an i9-14900K with
 Hyper-Threading off, where cpu0-7 are P-cores and cpu4 and cpu5 reach 6.0 GHz.
 Adjust them for other CPUs.
+
+## GPU memory
+
+`tools/gpu/bench.py LABEL [RUNS]` measures Ollama generation speed with a
+deterministic prompt and prints a hash of each answer. Run it once at stock to
+get the reference hash. `REF=<hash> tools/gpu/longrun.sh OFFSET MINUTES` then
+holds a memory offset (through `aioconf-nvidia`) and stops at the first answer
+that differs from the reference. The model is `qwen3:8b`; edit `MODEL` in
+`bench.py` for another one that fits fully in video memory.

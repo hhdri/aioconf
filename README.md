@@ -2,7 +2,8 @@
 
 Fan curves for the **NZXT Kraken 2023** liquid cooler (USB `1e71:300e`, sold as
 the Kraken and the Kraken Base) and for **motherboard fan headers** on Nuvoton
-chips, on Linux. One config file, applied at boot, with no daemon.
+chips, plus an optional **NVIDIA memory clock offset**, on Linux. One config
+file, applied at boot, with no daemon.
 
 `aioconf` is a freestanding Rust binary. It has no libc and no dependencies,
 not even `std`. It starts at its own `_start`, talks to the kernel through raw
@@ -46,6 +47,8 @@ sudo make install
   the logged-in desktop user run `aioconf` without `sudo`
 - loads the `nct6775` motherboard fan driver now and at every boot (skip this
   with `make install BOARD=0`)
+- adds `aioconf-nvidia`, a small Python helper the service runs for `gpu.*`
+  lines. It does nothing without them.
 
 `sudo make uninstall` removes everything except the config.
 
@@ -99,6 +102,9 @@ fan  = 30 25  34 35  38 50  42 75  46 100
 
 # Motherboard header 1: up to 4 points, following a chip sensor
 board.pwm1 = CPUTIN  40 40  50 50  60 70  68 100
+
+# NVIDIA clock offsets in NVML's units, applied by aioconf-nvidia
+gpu.mem_offset = 3000
 ```
 
 - **Kraken curves** follow the cooler's own liquid temperature sensor. Duty is
@@ -111,7 +117,11 @@ board.pwm1 = CPUTIN  40 40  50 50  60 70  68 100
   chip holds the first duty. The chip's fifth curve point, its critical
   temperature, is left as the BIOS set it. Ramp times are deliberately not
   configurable, see [Case fans](#case-fans).
-- A line left out leaves that fan alone.
+- **GPU offsets** go through NVIDIA's NVML library, which the freestanding
+  binary cannot load, so `aioconf` only validates them and `aioconf-nvidia`
+  applies them. The memory clock that `nvidia-smi` reports rises by half the
+  offset. `aioconf-nvidia status` shows the current offsets and allowed range.
+- A line left out leaves that fan or clock alone.
 
 After editing, run `sudo aioconf apply` or `sudo systemctl start aioconf`.
 
@@ -262,6 +272,54 @@ untouched:
 The same single-thread runs without any limit averaged 5857 MHz on a 6.0 GHz
 core, 5700 MHz on a 5.7 GHz core and 4400 MHz on an E-core. Up to four busy
 P-cores run at full turbo under 180 W.
+
+### GPU memory clock
+
+Token generation in Ollama reads the whole model once per token, so on a
+128-bit RTX 4060 it is limited by memory bandwidth. At stock, `qwen3:8b`
+reached about 236 GB/s of the bus's 264 GB/s. Raising the memory clock raises
+generation speed almost in proportion:
+
+![RTX 4060: memory clock vs Ollama generation speed](docs/gpu-memory.svg)
+
+| Offset | Memory clock | Tokens/s | vs stock | Graphics clock | GPU peak | Answers |
+|---|---|---|---|---|---|---|
+| 0 | 8251 MHz | 48.66 | | 2700 MHz | 65 °C | correct |
+| +1000 | 8751 MHz | 51.34 | +5.5% | 2655 MHz | 66 °C | correct |
+| +2000 | 9251 MHz | 54.10 | +11.2% | 2625 MHz | 67 °C | correct |
+| +3000 | 9751 MHz | 56.67 | +16.5% | 2610 MHz | 67 °C | correct |
+| +3500 | 10001 MHz | 57.96 | +19.1% | 2565 MHz | 68 °C | correct |
+| +4000 | 10251 MHz | 59.29 | +21.8% | 2535 MHz | 68 °C | **all wrong** |
+
+Every run used temperature 0 and a fixed seed, so a working card returns the
+same answer byte for byte. At +4000 nothing crashed and the kernel logged no
+errors, yet all eight answers differed from the stock answer and from each
+other. The memory was silently corrupting the model's numbers. **A memory
+overclock has to be checked by its output, not by whether it crashes.**
+
+Three things about the card shaped the choice:
+
+- **One offset covers every power state.** Setting it for one state sets it
+  for all.
+- **Compute runs 250 MHz lower than graphics.** CUDA work such as Ollama runs
+  in power state P2, games in P0. With `gpu.mem_offset = 3000`, Ollama gets
+  9751 MHz and games get 10001 MHz.
+- **The 115 W limit cannot be raised**, and the card reports no power reading
+  on Linux. The memory overclock costs graphics clock instead, 2700 down to
+  2610 MHz at +3000, which generation barely uses.
+
+The chosen value is `gpu.mem_offset = 3000`. A 30-minute continuous run at
++3500 held compute at 10001 MHz, the clock games see at +3000. It returned 184
+answers, every one identical to stock, with no driver errors and the GPU at
+68 °C. At +3000, games run at that tested clock and compute runs 250 MHz below
+it, 500 MHz below the first failure. Installed, Ollama generates 56.6 tokens
+per second, 16.5% faster than stock.
+
+The offset survives the GPU going idle but not a reboot or a driver reload,
+so the service reapplies it at boot and after resume. To find your own value,
+raise the offset in steps with a deterministic prompt and stop at the first
+changed answer, then back off and run a long check. The scripts used here
+compare every answer automatically.
 
 ### Hyper-Threading
 

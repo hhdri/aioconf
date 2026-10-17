@@ -13,6 +13,8 @@
   .s1-line { stroke: #2a78d6; fill: none; }
   .s2-line { stroke: #eb6834; fill: none; }
   .s3-line { stroke: #1baf7a; fill: none; }
+  .crit-line { stroke: #d03b3b; fill: none; }
+  .crit-dot { fill: #d03b3b; }
   .s1-dot { fill: #2a78d6; }
   .s2-dot { fill: #eb6834; }
   .ring { stroke: #fcfcfb; stroke-width: 2; }
